@@ -1,0 +1,36 @@
+  .logo{
+    width: 15%;
+    height: auto;
+     right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+
+
+
+  }
+
+  ion-menu::part(backdrop) {
+    background-color: rgba(27, 27, 27, 0.5);
+  }
+
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+
+    box-shadow: 4px 0px 16px rgba(15, 15, 15, 0.18);
+  }
+
+  ion-searchbar{
+    border-radius: 20%;
+  }
+
+  .imgvio{
+
+    width: 15%;
+    height: auto;
+
+  }
+
+

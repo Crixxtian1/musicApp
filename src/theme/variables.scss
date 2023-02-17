@@ -232,5 +232,23 @@
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+
   }
+}
+:root {
+	--ion-color-tema: #6e28f0;
+	--ion-color-tema-rgb: 110,40,240;
+	--ion-color-tema-contrast: #ffffff;
+	--ion-color-tema-contrast-rgb: 255,255,255;
+	--ion-color-tema-shade: #6123d3;
+	--ion-color-tema-tint: #7d3ef2;
+}
+
+.ion-color-tema {
+	--ion-color-base: var(--ion-color-tema);
+	--ion-color-base-rgb: var(--ion-color-tema-rgb);
+	--ion-color-contrast: var(--ion-color-tema-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-tema-contrast-rgb);
+	--ion-color-shade: var(--ion-color-tema-shade);
+	--ion-color-tint: var(--ion-color-tema-tint);
 }
