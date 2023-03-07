@@ -235,13 +235,14 @@
 
   }
 }
+
 :root {
-	--ion-color-tema: #6e28f0;
-	--ion-color-tema-rgb: 110,40,240;
+	--ion-color-tema: #8c14a3;
+	--ion-color-tema-rgb: 140,20,163;
 	--ion-color-tema-contrast: #ffffff;
 	--ion-color-tema-contrast-rgb: 255,255,255;
-	--ion-color-tema-shade: #6123d3;
-	--ion-color-tema-tint: #7d3ef2;
+	--ion-color-tema-shade: #7b128f;
+	--ion-color-tema-tint: #982cac;
 }
 
 .ion-color-tema {
@@ -251,4 +252,14 @@
 	--ion-color-contrast-rgb: var(--ion-color-tema-contrast-rgb);
 	--ion-color-shade: var(--ion-color-tema-shade);
 	--ion-color-tint: var(--ion-color-tema-tint);
+}
+
+.logo {
+  object-fit: scale-down;
+  height: 100%;
+}
+
+.title {
+  font-weight: 600;
+  text-align: center;
 }

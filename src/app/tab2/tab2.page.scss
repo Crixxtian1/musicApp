@@ -26,11 +26,54 @@
     border-radius: 20%;
   }
 
-  .imgvio{
+  ion-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width: 15%;
-    height: auto;
-
+    img {
+      width: 9rem;
+      height: 8rem;
+      object-fit: scale-down;
+    }
   }
 
+  ion-row {
+    width: 100%;
+    height: 33.3%;
+  }
+
+  ion-card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    * {
+      text-align: center;
+    }
+  }
+
+  ion-grid {
+    height: 100%;
+  }
+
+  ion-col {
+    width: 50%;
+  }
+
+  ion-card-header {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ion-card-title{
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  ion-card-content {
+    height: 70%;
+  }
 
