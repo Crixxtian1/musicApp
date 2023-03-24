@@ -8,6 +8,18 @@ const routes: Routes = [
   },  {
     path: 'instrumentos',
     loadChildren: () => import('./instrumentos/instrumentos.module').then( m => m.InstrumentosPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'cadatroprof',
+    loadChildren: () => import('./cadatroprof/cadatroprof.module').then( m => m.CadatroprofPageModule)
   }
 
 ];
