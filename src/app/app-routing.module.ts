@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'cadatroprof',
     loadChildren: () => import('./cadatroprof/cadatroprof.module').then( m => m.CadatroprofPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   }
 
 ];
