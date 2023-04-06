@@ -11,73 +11,73 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Nome</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <br>
+      <ion-input type="text" fill="outline" label="Nome" labelPlacement="floating"
+        helperText="Entre com o nome" errorText="Nome inválido" ngModel></ion-input>
 
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <br>
 
-      <ion-item>
-        <ion-label position="floating">Senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
+      <ion-input type="email" fill="outline" label="Email" labelPlacement="floating" helperText="Entre com o email"
+      errorText="Email inválido" ngModel email></ion-input>
+    <Br>
 
-      <ion-item>
-        <ion-label position="floating">Confirmar senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
+      <ion-input type="password" fill="outline" label="Senha" labelPlacement="floating" helperText="Entre com a senha"
+        errorText="Senha inválida" ngModel password></ion-input>
+      <br>
 
-      <ion-item>
-        <ion-label class="text" position="floating">Sexo</ion-label>
+      <ion-input type="password" fill="outline" label="Confirmar Senha" labelPlacement="floating" helperText=""
+        errorText="Senha inválida" ngModel password></ion-input>
+
+      <Br>
+
+        <ion-label>Sexo</ion-label>
+        <ion-select label="Selecione o sexo" label-placement="floating" fill="outline">
+          <ion-select-option value="apple">Feminino</ion-select-option>
+          <ion-select-option value="banana">Masculino</ion-select-option>
+          <ion-select-option value="orange">Outro</ion-select-option>
+        </ion-select>
+
         <br>
-        <ion-list>
-          <ion-item>
-            <ion-select interface="popover" placeholder="Selecionar Sexo">
-              <ion-select-option value="fem">Feminino</ion-select-option>
-              <ion-select-option value="masc">Masculino</ion-select-option>
-              <ion-select-option value="or">Outro</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
 
-      </ion-item>
+        <ion-label>Data de Nascimento</ion-label>
+        <ion-input fill="outline" type="date" aria-label="Data de Nascimento"></ion-input>
 
-      <ion-item>
-        <ion-label position="floating">Data de Nascimento</ion-label>
+
+
         <br>
-        <ion-input type="date"></ion-input>
-      </ion-item>
 
 
-      <ion-item>
-        <ion-label class="text" position="floating">Instrumentos</ion-label>
+
+
+        <ion-label><h2>Instrumentos</h2></ion-label>
+
+
         <br>
-      </ion-item>
 
 
-        <ion-list>
-          <ion-item>
+
+
+
             <ion-label>CORDAS</ion-label>
-            <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
-              <ion-select-option value="apples">Violão</ion-select-option>
-              <ion-select-option value="oranges">Guitarra</ion-select-option>
-              <ion-select-option value="bananas">Baixo</ion-select-option>
-              <ion-select-option value="bananas">Violino</ion-select-option>
-              <ion-select-option value="bananas">Violoncelo</ion-select-option>
-              <ion-select-option value="bananas">Contrabaixo Elétrico</ion-select-option>
-              <ion-select-option value="bananas">Contrabaixo Acústico</ion-select-option>
-              <ion-select-option value="bananas">Viola</ion-select-option>
-              <ion-select-option value="bananas">Ukulele</ion-select-option>
-              <ion-select-option value="bananas">Cavaquinho</ion-select-option>
-              <ion-select-option value="bananas">Harpa</ion-select-option>
-            </ion-select>
-          </ion-item>
-          <ion-item>
+            <ion-item>
+              <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
+                <ion-select-option value="apples">Violão</ion-select-option>
+                <ion-select-option value="oranges">Guitarra</ion-select-option>
+                <ion-select-option value="bananas">Baixo</ion-select-option>
+                <ion-select-option value="bananas">Violino</ion-select-option>
+                <ion-select-option value="bananas">Violoncelo</ion-select-option>
+                <ion-select-option value="bananas">Contrabaixo Elétrico</ion-select-option>
+                <ion-select-option value="bananas">Contrabaixo Acústico</ion-select-option>
+                <ion-select-option value="bananas">Viola</ion-select-option>
+                <ion-select-option value="bananas">Ukulele</ion-select-option>
+                <ion-select-option value="bananas">Cavaquinho</ion-select-option>
+                <ion-select-option value="bananas">Harpa</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+<br>
             <ion-label>SOPRO</ion-label>
+            <ion-item>
             <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
               <ion-select-option value="apples">Clarinete</ion-select-option>
               <ion-select-option value="oranges">Flauta</ion-select-option>
@@ -89,9 +89,10 @@
 
             </ion-select>
           </ion-item>
+<br>
 
-          <ion-item>
             <ion-label>PERCUSSÃO</ion-label>
+            <ion-item>
             <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
               <ion-select-option value="apples">Bateria</ion-select-option>
               <ion-select-option value="oranges">Cajon</ion-select-option>
@@ -102,19 +103,24 @@
               <ion-select-option value="bananas">Tamborim</ion-select-option>
             </ion-select>
           </ion-item>
+<br>
 
 
-          <ion-item>
-            <ion-label position="floating">Outros:</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
-        </ion-list>
-          <br>
-
-          <ion-item>
-            <ion-label position="floating">Cidade</ion-label>
+            <ion-label>OUTROS INSTRUMENTOS:</ion-label>
+            <ion-item>
             <ion-input type="text"></ion-input>
           </ion-item>
+
+          <br>
+
+
+          <ion-label>Cidade:</ion-label>
+          <ion-input fill="outline" label=""></ion-input>
+
+
+        <br>
+
+
 
 
 

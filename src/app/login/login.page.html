@@ -5,11 +5,7 @@
         <ion-icon slot="icon-only" name="arrow-back" ></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons slot="end" >
-      <ion-button color="tema"  class="b" routerLink="/cadastro">
-        Registrar
-      </ion-button>
-    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -18,23 +14,23 @@
     <h1>Login</h1>
     <img src="../../assets/usuario.png" alt="logo da imagem">
   </div>
-  <form id="form">
-    <div class="c">
-    <ion-item>
-      <ion-label position="floating">Email ou nome de Usuário</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+
+  <Br>
+
+  <ion-input type="text" fill="outline" label="Nome" labelPlacement="floating"
+  helperText="" errorText="Nome inválido" ngModel></ion-input>
+
+<br>
+<ion-input type="password" fill="outline" label="Senha" labelPlacement="floating" helperText=""
+errorText="Senha inválida" ngModel password></ion-input>
+
 
     <div class="links">
       <a href="#" color="roxo">Esqueceu sua senha</a>
     </div>
-  </div>
+<br>
 
     <ion-button color = "tema" expand="block" shape="round">Login</ion-button>
-  </form>
+
 
 </ion-content>
