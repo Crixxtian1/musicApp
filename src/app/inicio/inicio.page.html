@@ -1,12 +1,18 @@
-<ion-header>
-
-</ion-header>
+<ion-header></ion-header>
 
 <ion-content>
+
   <ion-grid>
-    <img src="..//../assets/logo_tcc__2_-removebg-preview.png" alt="">
-    <ion-button expand="block" color="tema" [routerLink]="['/cadatroprof']" routerLinkActive="router-link-active" >Cadastrar-se como professor</ion-button>
-    <ion-button expand="block" color="tema" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Cadastrar-se como aluno</ion-button>
-    <ion-button expand="block" color="tema">Fazer Login</ion-button>
+
+    <h1>Sound Sage</h1>
+
+    <img class="lg" src="..//../assets/logo_tcc__2_-removebg-preview.png" alt="">
+
+    <div class="posicao">
+      <ion-button class="bt" shape="round" color="light"  fill="outline" [routerLink]="['/cadatroprof']" routerLinkActive="router-link-active" >Cadastrar</ion-button>
+
+      <ion-button  class="bt" shape="round" color="light" fill="outline">Login</ion-button>
+    </div>
   </ion-grid>
+
 </ion-content>

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .cor{
   width: 100%;
@@ -12,4 +12,32 @@ ion-grid {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.bt{
+  width: 80% ;
+  margin-left: 40px;
+
+}
+
+
+
+h1{
+  position: absolute;
+  font-family: 'Great Vibes';
+  color: white;
+  font-size: 50px;
+  margin-left: 88px;
+  margin-top: 90px;
+  bottom: 52%;
+
+}
+
+.posicao{
+  margin-top: 50%;
+}
+
+
+.lg{
+  margin-top: 30px;
 }
