@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class InicioPage {
+  showInicio = false;
+  selectedOption: string | undefined;
 
-  constructor() { }
-
-  ngOnInit() {
+  toggleInicio() {
+    this.showInicio = !this.showInicio;
   }
 
+  selectOption(option: string) {
+    this.selectedOption = option;
+    this.showInicio = false;
+  }
 }

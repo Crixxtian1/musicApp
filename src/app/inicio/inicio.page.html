@@ -9,10 +9,24 @@
     <img class="lg" src="..//../assets/logo_tcc__2_-removebg-preview.png" alt="">
 
     <div class="posicao">
-      <ion-button class="bt" shape="round" color="light"  fill="outline" [routerLink]="['/cadatroprof']" routerLinkActive="router-link-active" >Cadastrar</ion-button>
 
-      <ion-button  class="bt" shape="round" color="light" fill="outline">Login</ion-button>
+    <!--<ion-button class="bt" shape="round" color="light"  fill="outline" [routerLink]="['/cadatroprof']" routerLinkActive="router-link-active" >Cadastrar</ion-button>-->
+
+    <div class="container">
+      <ion-button class="dropdown-btn" (click)="toggleInicio()"  shape="round" color="light"  fill="outline" >Cadastro </ion-button>
+      <div class="dropdown-list"  [hidden]="!showInicio">
+        <ion-item class="corbotao" (click)="selectOption('Opção 1')" [routerLink]="['/cadatroprof']" routerLinkActive="router-link-active">Professor</ion-item>
+
+        <ion-item (click)="selectOption('Opção 2')" [routerLink]="['/cadastro']" routerLinkActive="router-link-active">Aluno</ion-item>
+
+      </div>
+    </div>
+
+
+      <ion-button  class="dropdown-btn" shape="round" color="light" fill="outline" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</ion-button>
     </div>
   </ion-grid>
+
+
 
 </ion-content>
