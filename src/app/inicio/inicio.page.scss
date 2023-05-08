@@ -26,6 +26,8 @@ ion-grid {
 
 #logo {
   height: 40%;
+  margin-top: 12%;
+
 
 }
 
@@ -35,9 +37,6 @@ img {
   object-fit: contain;
 }
 
-.posicao {
-  margin-top: 50%;
-}
 
 
 
@@ -65,6 +64,7 @@ ion-row {
   width: 100%;
   border: none;
   font-size: 1rem;
+  margin-top: 11%;
 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -88,6 +88,6 @@ ion-row {
   }
 }
 
-.mb {
-  margin-bottom: 2rem;
-}
+//.mb {  // deixa junto os botoes de cadastro e login
+ // margin-bottom: 1px;
+//}
