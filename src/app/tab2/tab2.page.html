@@ -129,8 +129,8 @@
       </ion-row>
     </ion-grid>
 
-    <ion-button fill="clear" expand="block" (click)="mostrarOpcoes()">Mais opções</ion-button>
-    <ion-list *ngIf="opcoesVisiveis">
+    <ion-button fill="clear" expand="block" (click)="toggleOptions()">Mais opções</ion-button>
+    <ion-list *ngIf="showList">
       <ion-item>
         Opção 1
       </ion-item>
