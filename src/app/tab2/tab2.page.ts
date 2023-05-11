@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  showButton = true;
   showList = false;
 
-  toggleOptions() {
-    this.showList = !this.showList;
+  showOptions() {
+    this.showButton = false;
+    this.showList = true;
   }
 
 }
