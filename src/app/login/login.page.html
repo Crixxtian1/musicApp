@@ -1,7 +1,7 @@
 <ion-header >
-  <ion-toolbar>
+  <ion-toolbar color="tema">
     <ion-buttons slot="start" >
-      <ion-button color="primary" routerLink="/tabs/tab1">
+      <ion-button color="light" routerLink="/tabs/tab1">
         <ion-icon slot="icon-only" name="arrow-back" ></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -28,11 +28,11 @@ errorText="Senha inválida" ngModel password></ion-input>
 </div>
 
     <div class="links" color = "dark">
-      <a href="#" color="dark">Esqueceu sua senha?</a>
+      <a href="#" color="dark" [routerLink]="['/esqueceusenha']" routerLinkActive="router-link-active" >Esqueceu sua senha?</a>
     </div>
 <br>
 
-    <ion-button color = "tema" expand="block" shape="round">Login</ion-button>
+    <ion-button color = "tema" expand="block" shape="round" [routerLink]="['/tabs/tab2']" routerLinkActive="router-link-active" >Login</ion-button>
 
 
 </ion-content>

@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'instrumentos',
     loadChildren: () => import('./instrumentos/instrumentos.module').then( m => m.InstrumentosPageModule)
   },
@@ -24,6 +25,23 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'esqueceusenha',
+    loadChildren: () => import('./esqueceusenha/esqueceusenha.module').then( m => m.EsqueceusenhaPageModule)
+  },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },
+
+  {
+    path: 'adicionarconta',
+    loadChildren: () => import('./adicionarconta/adicionarconta.module').then( m => m.AdicionarcontaPageModule)
+  },
+  {
+    path: 'suaconta',
+    loadChildren: () => import('./suaconta/suaconta.module').then( m => m.SuacontaPageModule)
   }
 
 ];
