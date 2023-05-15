@@ -9,7 +9,7 @@
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
       </ion-avatar>
-      <ion-label>Perfil</ion-label>
+      <ion-label [routerLink]="['/editarperfil']" routerLinkActive="router-link-active" >Perfil</ion-label>
       <ion-icon name="create-outline"></ion-icon>
     </ion-item>
 
@@ -18,7 +18,7 @@
       <ion-item>
         <ion-icon name="settings-outline"></ion-icon>
 
-        <ion-label>Configurações</ion-label>
+        <ion-label [routerLink]="['/configuracoes']" routerLinkActive="router-link-active" >Configurações</ion-label>
       </ion-item>
 
 

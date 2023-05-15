@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color ="tema">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Configurações</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +14,7 @@
 
     <ion-item>
       <ion-icon name="person-circle-outline" color="dark"></ion-icon>
-      <ion-label>Sua conta</ion-label>
+      <ion-label [routerLink]="['/suaconta']" routerLinkActive="router-link-active" >Sua conta</ion-label>
 
 
     </ion-item>
@@ -20,7 +23,7 @@
 
     <ion-item>
       <ion-icon name="people-outline" color="dark"></ion-icon>
-      <ion-label>Adicionar outra conta</ion-label>
+      <ion-label [routerLink]="['/adicionarconta']" routerLinkActive="router-link-active" >Adicionar outra conta</ion-label>
 
     </ion-item>
 

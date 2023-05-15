@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'suaconta',
     loadChildren: () => import('./suaconta/suaconta.module').then( m => m.SuacontaPageModule)
+  },  {
+    path: 'editarperfil',
+    loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   }
+
 
 ];
 @NgModule({
