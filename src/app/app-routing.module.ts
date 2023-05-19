@@ -42,13 +42,18 @@ const routes: Routes = [
   {
     path: 'suaconta',
     loadChildren: () => import('./suaconta/suaconta.module').then( m => m.SuacontaPageModule)
-  },  {
+  },
+  {
     path: 'editarperfil',
     loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   },
   {
     path: 'tabelasdecadastro',
     loadChildren: () => import('./tabelasdecadastro/tabelasdecadastro.module').then( m => m.TabelasdecadastroPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
   }
 
 

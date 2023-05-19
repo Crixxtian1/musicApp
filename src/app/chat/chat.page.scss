@@ -1,0 +1,26 @@
+page-chat {
+  ion-content {
+    padding-bottom: 50px; /* Ajuste o tamanho do rodapé conforme necessário */
+  }
+
+  ion-item.sent {
+    justify-content: flex-end;
+  }
+
+  .message-content {
+    background-color: #DCF8C6; /* Cor de fundo das mensagens enviadas */
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%; /* Ajuste a largura máxima conforme necessário */
+  }
+
+  .message-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .message-time {
+    font-size: 12px;
+    color: #888;
+  }
+}
