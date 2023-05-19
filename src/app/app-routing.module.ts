@@ -45,6 +45,10 @@ const routes: Routes = [
   },  {
     path: 'editarperfil',
     loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
+  },
+  {
+    path: 'tabelasdecadastro',
+    loadChildren: () => import('./tabelasdecadastro/tabelasdecadastro.module').then( m => m.TabelasdecadastroPageModule)
   }
 
 
