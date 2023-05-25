@@ -11,8 +11,8 @@ export class Tab2Page {
   showList = false;
 
   showOptions() {
-    this.showButton = false;
-    this.showList = true;
+    this.showButton = true;
+    this.showList = !this.showList;
   }
 
 }

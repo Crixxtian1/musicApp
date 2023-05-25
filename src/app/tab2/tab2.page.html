@@ -1,38 +1,47 @@
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar color="tema">
+
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
       </ion-avatar>
-      <ion-label [routerLink]="['/editarperfil']" routerLinkActive="router-link-active" >Perfil</ion-label>
+      <ion-label
+        [routerLink]="['/editarperfil']"
+        routerLinkActive="router-link-active"
+        >Perfil</ion-label
+      >
       <ion-icon name="create-outline"></ion-icon>
     </ion-item>
 
-      <br>
+    <br />
 
-      <ion-item>
-        <ion-icon name="settings-outline"></ion-icon>
+    <ion-item>
+      <ion-icon name="settings-outline"></ion-icon>
 
-        <ion-label [routerLink]="['/configuracoes']" routerLinkActive="router-link-active" >Configurações</ion-label>
-      </ion-item>
-
-
+      <ion-label
+        [routerLink]="['/configuracoes']"
+        routerLinkActive="router-link-active"
+        >Configurações</ion-label
+      >
+    </ion-item>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar color="tema">
+      <ion-title mode="ios">INSTRUMENTOS</ion-title>
+
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-
-
-      <img class="logo" src="..//../assets/logo_tcc__2_-removebg-preview.png" alt="">
 
     </ion-toolbar>
   </ion-header>
@@ -43,13 +52,16 @@
       mode="ios"
       placeholder="Pesquisa"
     ></ion-searchbar>
-<ion-title class="title">INSTRUMENTOS</ion-title>
-
 
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-card [routerLink]="['/tabelasdecadastro']" routerLinkActive="router-link-active"  class="cardvio" color="light">
+          <ion-card
+            [routerLink]="['/tabelasdecadastro']"
+            routerLinkActive="router-link-active"
+            class="cardvio"
+            color="light"
+          >
             <ion-card-header>
               <ion-card-title>CANTO</ion-card-title>
             </ion-card-header>
@@ -121,93 +133,93 @@
           </ion-card>
         </ion-col>
       </ion-row>
-
-
-
-
-
-
     </ion-grid>
 
-    <ion-button fill="clear" expand="block" (click)="showOptions()" *ngIf="showButton" color="tema">Mais opções</ion-button>
+    <ion-button
+      fill="clear"
+      expand="block"
+      (click)="showOptions()"
+      *ngIf="showButton"
+      color="tema"
+      >{{showList ? 'Esconder opções' : 'Mais opções'}}</ion-button
+    >
     <ion-list *ngIf="showList">
-
       <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>VIOLINO</ion-card-title>
-            </ion-card-header>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>VIOLINO</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/violino.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>VIOLONCELO</ion-card-title>
-            </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/violino.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>VIOLONCELO</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/violoncelo.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/violoncelo.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>VIOLA</ion-card-title>
-            </ion-card-header>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>VIOLA</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/viola.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>UKULELE</ion-card-title>
-            </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/viola.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>UKULELE</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/ukulele.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/ukulele.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>CAVAQUINHO</ion-card-title>
-            </ion-card-header>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>CAVAQUINHO</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/cavaquinho.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card class="cardvio" color="light">
-            <ion-card-header>
-              <ion-card-title>HARPA</ion-card-title>
-            </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/cavaquinho.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>HARPA</ion-card-title>
+              </ion-card-header>
 
-            <ion-card-content>
-              <img class="imgs" src="../../assets/HARPA.png" alt="" />
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/HARPA.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -285,91 +297,82 @@
         </ion-row>
       </ion-grid>
 
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>TUBA</ion-card-title>
+              </ion-card-header>
 
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>TUBA</ion-card-title>
-        </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/tuba.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>CAJON</ion-card-title>
+              </ion-card-header>
 
-        <ion-card-content>
-          <img class="imgs" src="../../assets/tuba.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>CAJON</ion-card-title>
-        </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/CAJON.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
 
-        <ion-card-content>
-          <img class="imgs" src="../../assets/CAJON.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>PANDEIRO</ion-card-title>
+              </ion-card-header>
 
-  <ion-row>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>PANDEIRO</ion-card-title>
-        </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/PANDEIRO.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>TAMBOR</ion-card-title>
+              </ion-card-header>
 
-        <ion-card-content>
-          <img class="imgs" src="../../assets/PANDEIRO.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>TAMBOR</ion-card-title>
-        </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/tambor.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
 
-        <ion-card-content>
-          <img class="imgs" src="../../assets/tambor.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>TAMBORIM</ion-card-title>
+              </ion-card-header>
 
-  <ion-row>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>TAMBORIM</ion-card-title>
-        </ion-card-header>
+              <ion-card-content>
+                <img class="imgs" src="../../assets/tamborim.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="cardvio" color="light">
+              <ion-card-header>
+                <ion-card-title>BATERIA</ion-card-title>
+              </ion-card-header>
 
-        <ion-card-content>
-          <img class="imgs" src="../../assets/tamborim.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="cardvio" color="light">
-        <ion-card-header>
-          <ion-card-title>BATERIA</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          <img class="imgs" src="../../assets/bateria.png" alt="" />
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-
-
-
-
-</ion-list>
-
-
-
-
+              <ion-card-content>
+                <img class="imgs" src="../../assets/bateria.png" alt="" />
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
   </ion-content>
 </div>
