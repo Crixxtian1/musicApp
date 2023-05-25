@@ -1,12 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>editarperfil</ion-title>
+  <ion-toolbar color = "tema">
+    <ion-title>
+      Editar Perfil
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <div class="profile-wrapper">
+    <div class="profile-picture" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
+    <div class="nome" >
+      <h1>Arianny</h1>
+    </div>
+  </div>
 
+  <ion-button expand="full" color="tema" class="edit-button" (click)="editarPerfil()">Editar Perfil</ion-button>
 </ion-content>

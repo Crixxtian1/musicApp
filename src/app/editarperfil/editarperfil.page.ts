@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './editarperfil.page.html',
   styleUrls: ['./editarperfil.page.scss'],
 })
-export class EditarperfilPage implements OnInit {
+export class EditarperfilPage  {
+
+  photoUrl: string = 'assets/default-profile-picture.jpg'; // Coloque o caminho da imagem padrão
 
   constructor() { }
 
-  ngOnInit() {
+
+  editarPerfil() {
+    // Lógica para alterar a foto de perfil
   }
 
 }
