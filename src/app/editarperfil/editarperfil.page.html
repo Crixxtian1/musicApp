@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color = "tema">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
       Editar Perfil
     </ion-title>
@@ -13,9 +16,32 @@
       <h1>Arianny</h1>
     </div>
   </div>
-  <div class = "btpai">
-  <ion-button shape="round" color="tema" class="edit-button" (click)="editarPerfil()">Editar Perfil</ion-button>
 
 
+<ion-list>
+  <ion-item>
+    <ion-label position="stacked">Nome</ion-label>
+    <ion-input [(ngModel)]="profile.name" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Sobrenome</ion-label>
+    <ion-input [(ngModel)]="profile.sobrenome" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input [(ngModel)]="profile.email" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Senha</ion-label>
+    <ion-input [(ngModel)]="profile.senha" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+</ion-list>
+
+<div class = "btpai">
+<ion-button shape = round color = tema expand="full" [hidden]="editingEnabled" (click)="enableEditing()">Editar</ion-button>
+<ion-button shape = round color = tema expand="full" [hidden]="!editingEnabled" (click)="saveProfile()">Salvar</ion-button>
 </div>
 </ion-content>
