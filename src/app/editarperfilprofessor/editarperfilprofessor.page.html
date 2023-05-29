@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar color = "tema">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Editar Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-wrapper">
+    <div class="profile-picture" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
+    <div class="nome" >
+      <h1>Arianny</h1>
+    </div>
+  </div>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label position="stacked">Nome</ion-label>
+    <ion-input [(ngModel)]="profile.name" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Sobrenome</ion-label>
+    <ion-input [(ngModel)]="profile.sobrenome" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input [(ngModel)]="profile.email" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Senha</ion-label>
+    <ion-input [(ngModel)]="profile.senha" [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label><h2>Instrumentos</h2></ion-label>
+    <ion-input [disabled]="!editingEnabled"></ion-input>
+  </ion-item>
+        <br>
+
+        <ion-item>
+          <ion-label>CORDAS</ion-label>
+          <ion-input [disabled]="!editingEnabled"></ion-input>
+        </ion-item>
+
+
+
+            <ion-item>
+
+              <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
+                <ion-select-option value="apples">Violão</ion-select-option>
+                <ion-select-option value="oranges">Guitarra</ion-select-option>
+                <ion-select-option value="bananas">Piano</ion-select-option>
+                <ion-select-option value="bananas">Teclado</ion-select-option>
+                <ion-select-option value="bananas">Baixo</ion-select-option>
+                <ion-select-option value="bananas">Violino</ion-select-option>
+                <ion-select-option value="bananas">Violoncelo</ion-select-option>
+                <ion-select-option value="bananas">Viola</ion-select-option>
+                <ion-select-option value="bananas">Ukulele</ion-select-option>
+                <ion-select-option value="bananas">Cavaquinho</ion-select-option>
+                <ion-select-option value="bananas">Harpa</ion-select-option>
+
+              </ion-select>
+            </ion-item>
+
+<br>
+<ion-item>
+  <ion-label>SOPRO</ion-label>
+  <ion-input [disabled]="!editingEnabled"></ion-input>
+</ion-item>
+            <ion-item>
+            <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
+              <ion-select-option value="apples">Clarinete</ion-select-option>
+              <ion-select-option value="oranges">Flauta</ion-select-option>
+              <ion-select-option value="bananas">Saxofone</ion-select-option>
+              <ion-select-option value="bananas">Trombone</ion-select-option>
+              <ion-select-option value="bananas">Trompete</ion-select-option>
+              <ion-select-option value="bananas">Gaita</ion-select-option>
+              <ion-select-option value="bananas">Tuba</ion-select-option>
+
+            </ion-select>
+          </ion-item>
+<br>
+
+<ion-item>
+  <ion-label>PERCUSSÃO</ion-label>
+  <ion-input [disabled]="!editingEnabled"></ion-input>
+</ion-item>
+            <ion-item>
+            <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
+              <ion-select-option value="apples">Bateria</ion-select-option>
+              <ion-select-option value="oranges">Cajon</ion-select-option>
+              <ion-select-option value="bananas">Pandeiro</ion-select-option>
+              <ion-select-option value="bananas">Tambor</ion-select-option>
+              <ion-select-option value="bananas">Tamborim</ion-select-option>
+            </ion-select>
+          </ion-item>
+<br>
+
+<ion-item>
+  <ion-label>OUTROS INSTRUMENTOS:</ion-label>
+  <ion-input [disabled]="!editingEnabled"></ion-input>
+</ion-item>
+            <ion-item>
+            <ion-input [disabled]="!editingEnabled" type="text"></ion-input>
+          </ion-item>
+
+          <br>
+
+          <ion-item>
+            <ion-label>DESCRIÇÃO</ion-label>
+            <ion-input [disabled]="!editingEnabled"></ion-input>
+          </ion-item>
+            <ion-item>
+            <ion-input [disabled]="!editingEnabled" type="text"></ion-input>
+          </ion-item>
+
+
+
+
+</ion-list>
+
+<div class = "btpai">
+<ion-button shape = round color = tema expand="full" [hidden]="editingEnabled" (click)="enableEditing()">Editar</ion-button>
+<ion-button shape = round color = tema expand="full" [hidden]="!editingEnabled" (click)="saveProfile()">Salvar</ion-button>
+</div>
+</ion-content>
