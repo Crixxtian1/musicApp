@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarperfilPage  {
 
-  photoUrl: string = 'assets/default-profile-picture.jpg'; // Coloque o caminho da imagem padrão
+  photoUrl: string = 'assets/usuario.png'; // Coloque o caminho da imagem padrão
 
   profile = {
     name: 'Nome do Perfil',

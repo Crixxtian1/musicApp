@@ -1,31 +1,35 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header [translucent]="true">
+  <ion-toolbar color = tema>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ contact.name }}</ion-title>
-    <ion-avatar slot="end">
-      <img [src]="contact.avatar">
+    <ion-item color = tema>
+    <ion-avatar slot="start">
+
+
+      <img src="../../assets/usuario.png">
+
     </ion-avatar>
+    <ion-label >
+      Jose
+    </ion-label>
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list lines="none">
-    <ion-item *ngFor="let message of messages" [class]="message.sender === 'me' ? 'sent' : 'received'">
-      <div class="message-content">
-        <div class="message-text">{{ message.text }}</div>
-        <div class="message-time">{{ message.time }}</div>
-      </div>
+<ion-content  [fullscreen]="true">
+
+
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-list>
+    <ion-item>
+      <ion-input ></ion-input>
+      <ion-button fill="clear" ><ion-icon  name="navigate"></ion-icon></ion-button>
+
     </ion-item>
   </ion-list>
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-input [(ngModel)]="newMessage" placeholder="Digite sua mensagem"></ion-input>
-    <ion-buttons slot="end">
-      <ion-button (click)="sendMessage()">Enviar</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
 </ion-footer>

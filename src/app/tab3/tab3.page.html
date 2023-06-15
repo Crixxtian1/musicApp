@@ -1,21 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar color = tema>
-    <ion-title mode="ios">CHAT</ion-title>
+    <ion-title mode = "ios">
+      CHAT
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let contact of contacts" (click)="openChat(contact)">
-      <ion-avatar slot="start">
-        <img src="{{ contact.avatar }}">
-      </ion-avatar>
-      <ion-label>
-        <h2>{{ contact.name }}</h2>
-        <p>{{ contact.status }}</p>
-      </ion-label>
-      <ion-icon name="chatbubble-ellipses-outline" slot="end"></ion-icon>
-    </ion-item>
-  </ion-list>
+
+
+<ion-list>
+
+  <ion-list-header class="ion-padding-bottom" color ="light">
+    CONVERSAS
+  </ion-list-header>
+
+  <ion-item detail [routerLink]="['/chat']" routerLinkActive="router-link-active" >
+    <ion-avatar slot="start">
+
+      <img src="../../assets/usuario.png">
+
+    </ion-avatar>
+    <ion-label>
+      Jose
+      <p>
+        <ion-text>
+          Vamos jogar?
+        </ion-text>
+      </p>
+    </ion-label>
+    <ion-text slot="end" color="medium">19:00</ion-text>
+  </ion-item>
+
+  <ion-item detail>
+    <ion-avatar slot="start">
+
+      <img src="../../assets/usuario.png">
+
+    </ion-avatar>
+    <ion-label>
+      Isabelao
+      <p>
+        <ion-text>
+          Vamos sair?
+        </ion-text>
+      </p>
+    </ion-label>
+    <ion-text slot="end" color="medium">19:00</ion-text>
+  </ion-item>
+
+
+</ion-list>
 
 </ion-content>
