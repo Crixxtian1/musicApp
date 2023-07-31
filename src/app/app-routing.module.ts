@@ -57,6 +57,10 @@ const routes: Routes = [
   },  {
     path: 'editarperfilprofessor',
     loadChildren: () => import('./editarperfilprofessor/editarperfilprofessor.module').then( m => m.EditarperfilprofessorPageModule)
+  },
+  {
+    path: 'inicio2',
+    loadChildren: () => import('./inicio2/inicio2.module').then( m => m.Inicio2PageModule)
   }
 
 
