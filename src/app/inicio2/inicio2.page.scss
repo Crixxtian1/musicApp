@@ -47,18 +47,6 @@
     //   lightgray -25.416px -24.506px / 123.055% 124.238% no-repeat;
     //   display: flex;
   }
-}
-
-.bt {
-  display: flex;
-  width: 280px;
-  height: 56px;
-  padding: 11px 0px 10px 0px;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 20px;
-  border: 2px solid #ebebeb;
 
   p {
     color: #000;
@@ -69,4 +57,20 @@
     font-weight: 400;
     line-height: normal;
   }
+
 }
+
+  .bt {
+    display: flex;
+    width: 280px;
+    height: 56px;
+    padding: 11px 0px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #ebebeb;
+    margin-top: 90%;
+
+
+  }
