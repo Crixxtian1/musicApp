@@ -8,9 +8,44 @@
     <img id="logo" src="../../assets/circulo tcc.jpg" alt="">
 
     <div class="center">
-      <ion-button class="ion-text-center" fill="clear">
+      <ion-button [routerLink]="['/login']"
+      routerLinkActive="router-link-active"
+      class="ion-text-center" fill="clear" color="tema" >
         <p>Entrar</p>
       </ion-button>
     </div>
+
+    <ion-row [class]="showInicio2 ? '' : 'mb'">
+    <div class="center2">
+      <ion-button class="ion-text-center2"
+      (click)="toggleInicio2()"
+      shape="round"
+      color="tema"
+      fill="clear"
+      >
+        <p>Cadastro</p>
+      </ion-button>
+    </div>
+  </ion-row>
+
+
+
+  <ion-row class="dropdown-list" *ngIf="showInicio2">
+
+    <ion-item color="tema" class="bt"
+      (click)="selectOption('Opção 1')"
+      [routerLink]="['/cadastroprof']"
+      routerLinkActive="router-link-active"
+      >Professor</ion-item
+    >
+
+    <ion-item color="tema" class="bt"
+      (click)="selectOption('Opção 2')"
+      [routerLink]="['/cadastro']"
+      routerLinkActive="router-link-active"
+      >Aluno</ion-item
+    >
+  </ion-row>
+
   </div>
 </ion-content>

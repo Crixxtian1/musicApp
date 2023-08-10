@@ -9,14 +9,21 @@
 </ion-header>
 
 <ion-content>
-  <div id="header">
-    <h1>Login</h1>
-    <img src="../../assets/usuario.png" alt="logo da imagem">
-  </div>
+  <ion-card>
+
+  <ion-card-header>
+    <ion-card-title>
+      <h1>Login</h1>
+      <img src="../../assets/usuario.png" alt="logo da imagem">
+    </ion-card-title>
+  </ion-card-header>
+
 
   <Br>
 
-<div class ="login">
+
+
+  <ion-card-content>
   <ion-input type="text" fill="outline" label="Nome" labelPlacement="floating"
   helperText="" errorText="Nome inválido" ngModel></ion-input>
 
@@ -24,14 +31,15 @@
 
 <ion-input type="password" fill="outline" label="Senha" labelPlacement="floating" helperText=""
 errorText="Senha inválida" ngModel password></ion-input>
-</div>
 
-    <div class="links" color = "dark">
-      <a href="#" color="dark" [routerLink]="['/esqueceusenha']" routerLinkActive="router-link-active" >Esqueceu sua senha?</a>
+
+    <div class="links" color = "tema">
+      <a href="#" [routerLink]="['/esqueceusenha']" routerLinkActive="router-link-active" >Esqueceu sua senha?</a>
     </div>
 <br>
 
     <ion-button color = "tema" expand="block" shape="round" [routerLink]="['/tabs/tab2']" routerLinkActive="router-link-active" >Login</ion-button>
-
+  </ion-card-content>
+  </ion-card>
 
 </ion-content>
