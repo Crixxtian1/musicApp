@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path: 'inicio2',
     loadChildren: () => import('./inicio2/inicio2.module').then( m => m.Inicio2PageModule)
+  },
+  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   }
 
 

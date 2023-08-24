@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class TabelasdecadastroPage implements OnInit {
 
   user = {
-    name: 'Arianny',
-    city: 'Lençois',
-    bio: 'Biografia do Usuário',
+    name: 'Joaquim Machado',
+    city: 'Lençois Paulsita',
+    bio: '    :)',
     address: 'joquim gomes machado, 555',
     imageUrl: '../../assets/usuario.png',
+    func: 'Canto',
+    cont: '989813546'
   };
 
   constructor() { }
