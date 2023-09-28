@@ -1,0 +1,28 @@
+ion-avatar img {
+  border-radius: 50%;
+  width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+ion-card {
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: auto;
+
+}
+
+img{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  margin: auto;
+left: 50%;
+right: 50%;
+  width: 40%;
+  display: flex;
+}

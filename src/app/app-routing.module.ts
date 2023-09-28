@@ -65,6 +65,22 @@ const routes: Routes = [
   {
     path: 'info',
     loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'tabalasdecadastro2',
+    loadChildren: () => import('./tabalasdecadastro2/tabalasdecadastro2.module').then( m => m.Tabalasdecadastro2PageModule)
+  },
+  {
+    path: 'tabalasdecadastro3',
+    loadChildren: () => import('./tabalasdecadastro3/tabalasdecadastro3.module').then( m => m.Tabalasdecadastro3PageModule)
+  },
+  {
+    path: 'tabalasdecadastro4',
+    loadChildren: () => import('./tabalasdecadastro4/tabalasdecadastro4.module').then( m => m.Tabalasdecadastro4PageModule)
+  },
+  {
+    path: 'tabalasdecadastro5',
+    loadChildren: () => import('./tabalasdecadastro5/tabalasdecadastro5.module').then( m => m.Tabalasdecadastro5PageModule)
   }
 
 

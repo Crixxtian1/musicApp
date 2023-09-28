@@ -19,6 +19,9 @@
 
 
 <ion-list>
+
+  <ion-chip class="chip1" color ="tema">Dados</ion-chip>
+
   <ion-item>
     <ion-label position="stacked">Nome</ion-label>
     <ion-input [(ngModel)]="profile.name" [disabled]="!editingEnabled"></ion-input>
@@ -40,17 +43,18 @@
   </ion-item>
 
   <ion-item>
-    <ion-label><h2>Instrumentos</h2></ion-label>
-    <ion-input [disabled]="!editingEnabled"></ion-input>
+    <ion-label position="stacked">Descrição</ion-label>
+    <ion-input [(ngModel)]="profile.descricao" [disabled]="!editingEnabled"></ion-input>
   </ion-item>
-        <br>
 
-        <ion-item>
-          <ion-label>CORDAS</ion-label>
-          <ion-input [disabled]="!editingEnabled"></ion-input>
-        </ion-item>
+<br>
+  <ion-chip class="chip2" color ="tema">Instrumentos</ion-chip>
 
+  <br>
 
+<BR>
+
+  <p>Cordas</p>
 
             <ion-item>
 
@@ -71,10 +75,9 @@
             </ion-item>
 
 <br>
-<ion-item>
-  <ion-label>SOPRO</ion-label>
-  <ion-input [disabled]="!editingEnabled"></ion-input>
-</ion-item>
+
+<p>Sopro</p>
+
             <ion-item>
             <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
               <ion-select-option value="apples">Clarinete</ion-select-option>
@@ -89,10 +92,7 @@
           </ion-item>
 <br>
 
-<ion-item>
-  <ion-label>PERCUSSÃO</ion-label>
-  <ion-input [disabled]="!editingEnabled"></ion-input>
-</ion-item>
+<p>Percussão</p>
             <ion-item>
             <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
               <ion-select-option value="apples">Bateria</ion-select-option>
@@ -103,26 +103,6 @@
             </ion-select>
           </ion-item>
 <br>
-
-
-  <ion-label>OUTROS INSTRUMENTOS:</ion-label>
-  <ion-input [disabled]="!editingEnabled"></ion-input>
-
-            <ion-item>
-            <ion-input [disabled]="!editingEnabled" type="text"></ion-input>
-          </ion-item>
-
-          <br>
-
-
-            <ion-label>DESCRIÇÃO:</ion-label>
-            <ion-input [disabled]="!editingEnabled"></ion-input>
-
-            <ion-item>
-            <ion-input [disabled]="!editingEnabled" type="text"></ion-input>
-          </ion-item>
-
-
 
 
 </ion-list>

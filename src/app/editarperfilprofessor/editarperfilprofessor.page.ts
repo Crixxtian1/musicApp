@@ -14,7 +14,8 @@ export class EditarperfilprofessorPage  {
     sobrenome: '',
     email: 'email@example.com',
     senha: '',
-    instrumentos:''
+    instrumentos:'',
+    descricao:''
   };
 
   editingEnabled = false;

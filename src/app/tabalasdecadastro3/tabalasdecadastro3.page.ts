@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tabelasdecadastro',
-  templateUrl: './tabelasdecadastro.page.html',
-  styleUrls: ['./tabelasdecadastro.page.scss'],
+  selector: 'app-tabalasdecadastro3',
+  templateUrl: './tabalasdecadastro3.page.html',
+  styleUrls: ['./tabalasdecadastro3.page.scss'],
 })
-export class TabelasdecadastroPage implements OnInit {
+
+
+export class Tabalasdecadastro3Page implements OnInit {
 
   user = {
     name: 'Joaquim Machado',
@@ -13,7 +15,7 @@ export class TabelasdecadastroPage implements OnInit {
     bio: '    :)',
     address: 'joquim gomes machado, 555',
     imageUrl: '../../assets/usuario.png',
-    func: 'Canto',
+    func: 'Teclado',
     cont: '989813546'
   };
 
@@ -23,7 +25,7 @@ export class TabelasdecadastroPage implements OnInit {
     bio: '    :)',
     address: 'joquim gomes machado, 555',
     imageUrl: '../../assets/usuario.png',
-    func: 'Canto',
+    func: 'Teclado',
     cont: '989813546'
   };
 
@@ -33,7 +35,7 @@ export class TabelasdecadastroPage implements OnInit {
     bio: '    :)',
     address: 'joquim gomes machado, 555',
     imageUrl: '../../assets/usuario.png',
-    func: 'Canto',
+    func: 'Teclado',
     cont: '989813546'
   };
 
