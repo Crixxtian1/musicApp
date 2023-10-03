@@ -10,9 +10,9 @@ export class EditarperfilPage  {
   photoUrl: string = 'assets/usuario.png'; // Coloque o caminho da imagem padrão
 
   profile = {
-    name: 'Nome do Perfil',
+    name: '',
     sobrenome: '',
-    email: 'email@example.com',
+    email: '',
     senha: ''
   };
 

@@ -23,21 +23,12 @@ const routes: Routes = [
     loadChildren: () => import('./cadatroprof/cadatroprof.module').then( m => m.CadatroprofPageModule)
   },
   {
-    path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
-  },
-  {
     path: 'esqueceusenha',
     loadChildren: () => import('./esqueceusenha/esqueceusenha.module').then( m => m.EsqueceusenhaPageModule)
   },
   {
     path: 'configuracoes',
     loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
-  },
-
-  {
-    path: 'adicionarconta',
-    loadChildren: () => import('./adicionarconta/adicionarconta.module').then( m => m.AdicionarcontaPageModule)
   },
   {
     path: 'suaconta',
@@ -54,7 +45,8 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
-  },  {
+  },
+  {
     path: 'editarperfilprofessor',
     loadChildren: () => import('./editarperfilprofessor/editarperfilprofessor.module').then( m => m.EditarperfilprofessorPageModule)
   },

@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarperfilprofessorPage  {
 
-  photoUrl: string = 'assets/default-profile-picture.jpg'; // Coloque o caminho da imagem padrão
+  photoUrl: string = '../../assets/usuario.png'; // Coloque o caminho da imagem padrão
 
   profile = {
-    name: 'Nome do Perfil',
+    name: '',
     sobrenome: '',
-    email: 'email@example.com',
+    email: '',
     senha: '',
     instrumentos:'',
     descricao:''

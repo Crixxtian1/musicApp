@@ -39,9 +39,9 @@
 
         <ion-label>Sexo</ion-label>
         <ion-select label="Selecione o sexo" label-placement="floating" fill="outline">
-          <ion-select-option value="apple">Feminino</ion-select-option>
-          <ion-select-option value="banana">Masculino</ion-select-option>
-          <ion-select-option value="orange">Outro</ion-select-option>
+          <ion-select-option value="feminino">Feminino</ion-select-option>
+          <ion-select-option value="masculino">Masculino</ion-select-option>
+          <ion-select-option value="outro">Outro</ion-select-option>
         </ion-select>
 
         <br>
@@ -49,36 +49,26 @@
         <ion-label>Data de Nascimento</ion-label>
         <ion-input fill="outline" type="date" aria-label="Data de Nascimento"></ion-input>
 
-
-
         <br>
-
-
-
 
         <ion-label><h2>Instrumentos</h2></ion-label>
 
-
         <br>
-
-
-
-
 
             <ion-label>CORDAS</ion-label>
             <ion-item>
               <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
-                <ion-select-option value="apples">Violão</ion-select-option>
-                <ion-select-option value="oranges">Guitarra</ion-select-option>
-                <ion-select-option value="bananas">Piano</ion-select-option>
-                <ion-select-option value="bananas">Teclado</ion-select-option>
-                <ion-select-option value="bananas">Baixo</ion-select-option>
-                <ion-select-option value="bananas">Violino</ion-select-option>
-                <ion-select-option value="bananas">Violoncelo</ion-select-option>
-                <ion-select-option value="bananas">Viola</ion-select-option>
-                <ion-select-option value="bananas">Ukulele</ion-select-option>
-                <ion-select-option value="bananas">Cavaquinho</ion-select-option>
-                <ion-select-option value="bananas">Harpa</ion-select-option>
+                <ion-select-option value="violao">Violão</ion-select-option>
+                <ion-select-option value="guitarra">Guitarra</ion-select-option>
+                <ion-select-option value="piano">Piano</ion-select-option>
+                <ion-select-option value="teclado">Teclado</ion-select-option>
+                <ion-select-option value="baixo">Baixo</ion-select-option>
+                <ion-select-option value="violino">Violino</ion-select-option>
+                <ion-select-option value="violoncelo">Violoncelo</ion-select-option>
+                <ion-select-option value="viola">Viola</ion-select-option>
+                <ion-select-option value="ukulele">Ukulele</ion-select-option>
+                <ion-select-option value="cavaquinho">Cavaquinho</ion-select-option>
+                <ion-select-option value="harpa">Harpa</ion-select-option>
 
               </ion-select>
             </ion-item>
@@ -87,13 +77,13 @@
             <ion-label>SOPRO</ion-label>
             <ion-item>
             <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
-              <ion-select-option value="apples">Clarinete</ion-select-option>
-              <ion-select-option value="oranges">Flauta</ion-select-option>
-              <ion-select-option value="bananas">Saxofone</ion-select-option>
-              <ion-select-option value="bananas">Trombone</ion-select-option>
-              <ion-select-option value="bananas">Trompete</ion-select-option>
-              <ion-select-option value="bananas">Gaita</ion-select-option>
-              <ion-select-option value="bananas">Tuba</ion-select-option>
+              <ion-select-option value="clarinete">Clarinete</ion-select-option>
+              <ion-select-option value="flauta">Flauta</ion-select-option>
+              <ion-select-option value="saxofone">Saxofone</ion-select-option>
+              <ion-select-option value="trombone">Trombone</ion-select-option>
+              <ion-select-option value="trompete">Trompete</ion-select-option>
+              <ion-select-option value="gaita">Gaita</ion-select-option>
+              <ion-select-option value="tuba">Tuba</ion-select-option>
 
             </ion-select>
           </ion-item>
@@ -102,15 +92,14 @@
             <ion-label>PERCUSSÃO</ion-label>
             <ion-item>
             <ion-select placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
-              <ion-select-option value="apples">Bateria</ion-select-option>
-              <ion-select-option value="oranges">Cajon</ion-select-option>
-              <ion-select-option value="bananas">Pandeiro</ion-select-option>
-              <ion-select-option value="bananas">Tambor</ion-select-option>
-              <ion-select-option value="bananas">Tamborim</ion-select-option>
+              <ion-select-option value="bateria">Bateria</ion-select-option>
+              <ion-select-option value="cajon">Cajon</ion-select-option>
+              <ion-select-option value="pandeiro">Pandeiro</ion-select-option>
+              <ion-select-option value="tambor">Tambor</ion-select-option>
+              <ion-select-option value="tamborim">Tamborim</ion-select-option>
             </ion-select>
           </ion-item>
 <br>
-
 
             <ion-label>OUTROS INSTRUMENTOS:</ion-label>
             <ion-item>
@@ -119,20 +108,12 @@
 
           <br>
 
-
           <ion-label>Cidade:</ion-label>
           <ion-input fill="outline" label=""></ion-input>
 
-
         <br>
-
-
-
-
 
           <ion-button expand="block" color="tema" [routerLink]="['/tabs/tab2']" routerLinkActive="router-link-active">Cadastrar</ion-button>
     </ion-card-content>
   </ion-card>
-
-
 </ion-content>
