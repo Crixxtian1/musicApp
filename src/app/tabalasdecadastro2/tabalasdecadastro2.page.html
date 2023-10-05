@@ -18,58 +18,23 @@
     <br />
 
     <ion-card-title>Professores</ion-card-title>
-    <ion-card-subtitle>{{user.func}}</ion-card-subtitle>
+    <ion-card-subtitle>Violão</ion-card-subtitle>
   </ion-card-header>
 
-  <ion-card>
+  <ion-card *ngFor="let professor of professores">
     <ion-card-header>
         <ion-avatar>
-          <img alt="Instrument" [src]="user.imageUrl"/>
+          <img alt="Instrument" [src]="professor.imgprof"/>
         </ion-avatar>
-      <ion-card-title>{{ user.name }}</ion-card-title>
-      <ion-card-subtitle> {{ user.city }}</ion-card-subtitle>
+      <ion-card-title>{{ professor.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ professor.cidade}} - {{professor.uf}}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      <p><strong>Bio:</strong>{{ user.bio }}</p>
-      <p><strong>Endereço:</strong> {{ user.address }}</p>
-      <p><strong>Contato:</strong> {{ user.cont }}</p>
+      <p><strong>Bio:</strong>{{ professor.bio }}</p>
+      <p><strong>Telefone:</strong> {{ professor.tell }}</p>
+      <p><strong>Email:</strong> {{ professor.email }}</p>
     </ion-card-content>
   </ion-card>
-  <br>
 
-
-  <ion-card>
-    <ion-card-header>
-        <ion-avatar>
-          <img alt="Instrument" [src]="user2.imageUrl"/>
-        </ion-avatar>
-      <ion-card-title>{{ user2.name }}</ion-card-title>
-      <ion-card-subtitle> {{ user2.city }}</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <p><strong>Bio:</strong>{{ user2.bio }}</p>
-      <p><strong>Endereço:</strong> {{ user2.address }}</p>
-      <p><strong>Contato:</strong> {{ user2.cont }}</p>
-    </ion-card-content>
-  </ion-card>
-  <br>
-
-  <ion-card>
-    <ion-card-header>
-        <ion-avatar>
-          <img alt="Instrument" [src]="user3.imageUrl"/>
-        </ion-avatar>
-      <ion-card-title>{{ user3.name }}</ion-card-title>
-      <ion-card-subtitle> {{ user3.city }}</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <p><strong>Bio:</strong>{{ user3.bio }}</p>
-      <p><strong>Endereço:</strong> {{ user3.address }}</p>
-      <p><strong>Contato:</strong> {{ user3.cont }}</p>
-    </ion-card-content>
-  </ion-card>
-  <br>
 </ion-content>

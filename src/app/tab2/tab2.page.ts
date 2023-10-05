@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MusicaapiService } from '../services/musicaapi.service';
 
 @Component({
   selector: 'app-tab2',
