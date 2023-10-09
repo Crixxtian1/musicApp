@@ -7,8 +7,8 @@
 }
 
 .profile-picture {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: #ddd;
   background-size: cover;
@@ -49,4 +49,8 @@
     justify-items: center;
     text-align: center;
     padding-left: 37%;
+  }
+
+  .nome{
+    margin-top: 30px;
   }

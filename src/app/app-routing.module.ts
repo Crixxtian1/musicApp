@@ -30,10 +30,7 @@ const routes: Routes = [
     path: 'configuracoes',
     loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
   },
-  {
-    path: 'suaconta',
-    loadChildren: () => import('./suaconta/suaconta.module').then( m => m.SuacontaPageModule)
-  },
+
   {
     path: 'editarperfil',
     loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
@@ -42,10 +39,7 @@ const routes: Routes = [
     path: 'tabelasdecadastro',
     loadChildren: () => import('./tabelasdecadastro/tabelasdecadastro.module').then( m => m.TabelasdecadastroPageModule)
   },
-  {
-    path: 'chat',
-    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
-  },
+
   {
     path: 'editarperfilprofessor',
     loadChildren: () => import('./editarperfilprofessor/editarperfilprofessor.module').then( m => m.EditarperfilprofessorPageModule)

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicaapiService } from '../services/musicaapi.service';
 
 @Component({
   selector: 'app-tabalasdecadastro4',
@@ -7,39 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tabalasdecadastro4Page implements OnInit {
 
-  user = {
-    name: 'Joaquim Machado',
-    city: 'Lençois Paulsita',
-    bio: '    :)',
-    address: 'joquim gomes machado, 555',
-    imageUrl: '../../assets/usuario.png',
-    func: 'Piano',
-    cont: '989813546'
-  };
+  professores = [];
 
-  user2 = {
-    name: 'Arianny Flavio',
-    city: 'Lençois Paulsita',
-    bio: '    :)',
-    address: 'joquim gomes machado, 555',
-    imageUrl: '../../assets/usuario.png',
-    func: 'Piano',
-    cont: '989813546'
-  };
+  constructor(private musicaapiService: MusicaapiService) { }
 
-  user3 = {
-    name: 'Isadora Machado',
-    city: 'Lençois Paulsita',
-    bio: '    :)',
-    address: 'joquim gomes machado, 555',
-    imageUrl: '../../assets/usuario.png',
-    func: 'Piano',
-    cont: '989813546'
-  };
-
-  constructor() { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    this.musicaapiService.getProfessorPorInstrumento('piano').subscribe((res: any) => {this.professores = (res.content); console.log(this.professores)})
   }
+
 
 }
