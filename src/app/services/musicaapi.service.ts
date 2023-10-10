@@ -32,4 +32,23 @@ export class MusicaapiService {
     const res = this.http.get(`${this.url}/professores?nomeinstrumentos=${instrumento}`, this.httpHeader)
     return res
   }
+
+
+
+
+
+  getTodosInstrumentos() {
+    const res = this.http.get(`${this.url}/instrumentos`, this.httpHeader)
+    return res
+  }
+
+  getInstrumentosPorId(id: number) {
+    const res = this.http.get(`${this.url}/instrumentos/${id}`, this.httpHeader)
+    return res.subscribe(
+      res => res,
+    );
+  }
+
+
+
 }

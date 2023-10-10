@@ -16,4 +16,12 @@ export class Tab2Page {
     this.showList = !this.showList;
   }
 
+  instrumentos = [];
+
+  constructor(private musicaapiService: MusicaapiService) { }
+
+  async ngOnInit() {
+    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
+  }
+
 }
