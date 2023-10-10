@@ -8,12 +8,23 @@ import { MusicaapiService } from '../services/musicaapi.service';
 })
 export class TabelasdecadastroPage implements OnInit {
 
+
+
   professores = [];
+  cidades = [];
 
   constructor(private musicaapiService: MusicaapiService) { }
 
   async ngOnInit() {
-    this.musicaapiService.getProfessorPorInstrumento('canto').subscribe((res: any) => {this.professores = (res.content); console.log(this.professores)})
+
+    this.musicaapiService.getProfessorPorInstrumento('canto').subscribe((res: any) => {this.professores = (res.content); console.log(this.professores)}),
+
+    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.cidades = (res.content); console.log(this.cidades)})
   }
+
+
+
+
+
 
 }

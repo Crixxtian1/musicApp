@@ -51,4 +51,22 @@ export class MusicaapiService {
 
 
 
+  getTodasCidades() {
+    const res = this.http.get(`${this.url}/cidades/todos`, this.httpHeader)
+    return res.subscribe(
+      res => res,
+    );
+  }
+
+  getCidadesPorId(id: number) {
+    const res = this.http.get(`${this.url}/cidades/${id}`, this.httpHeader)
+    return res.subscribe(
+      res => res,
+    );
+  }
+
+
+
+
+
 }
