@@ -73,21 +73,13 @@
             </ion-card-header>
 
             <ion-card-content>
-              <img class="imgs" [src]="instrumento.imginstumento" alt="Insturmento" />
+              <img class="imgs" [src]="instrumento.imginstumento" alt="Instrumento" />
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-button
-      fill="clear"
-      expand="block"
-      (click)="showOptions()"
-      *ngIf="showButton"
-      color="tema"
-      >{{showList ? 'Esconder opções' : 'Mais opções'}}</ion-button
-    >
 
   </ion-content>
 </div>
