@@ -10,32 +10,26 @@ import { ProfessorService } from '../services/professor.service';
 })
 export class Tab2Page {
 
-  // totalInstrumentos = 0;
- //filtro = new InstrumentoFiltro();
   instrumentos = [];
-
+  instrumentosResult = [...this.instrumentos]
 
   constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService) { }
 
   async ngOnInit() {
     this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {
       this.instrumentos = (res.content);
+      this.instrumentosResult = [...this.instrumentos];
       console.log(this.instrumentos)
     })
-
-   // this.pesquisar();
   }
-
-//  pesquisar() {
-
-    //this.filtro.pagina = pagina;
-
-   //this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
-
-//  }
 
   public trocarParaTabelaCadastro(nomeinstrumento: string) {
     this.professorService.setInstrumento(nomeinstrumento);
+  }
+
+  public handleInput(event: any) {
+    const query = event.target.value.toLowerCase();
+    this.instrumentosResult = this.instrumentos.filter((d: any) => d.nomeinstrumento.toLowerCase().indexOf(query) > -1);
   }
 
 }

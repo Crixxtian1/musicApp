@@ -52,6 +52,7 @@
       animated="true"
       mode="ios"
       placeholder="Digite o nome do instrumento"
+      (ionInput)="handleInput($event)"
     ></ion-searchbar>
 
 
@@ -62,7 +63,7 @@
         <ion-col >
 
           <ion-card
-          *ngFor="let instrumento of instrumentos"
+          *ngFor="let instrumento of instrumentosResult"
             [routerLink]="['/tabelasdecadastro']"
             routerLinkActive="router-link-active"
             class="cardvio"

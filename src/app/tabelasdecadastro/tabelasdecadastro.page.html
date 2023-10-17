@@ -13,6 +13,7 @@
       animated="true"
       mode="ios"
       placeholder="Pesquise a cidade"
+      (ionInput)="pesquisarCidade($event)"
     ></ion-searchbar>
 
     <br />
@@ -23,7 +24,7 @@
   </ion-card-header>
 
 
-  <ion-card *ngFor="let professor of data.content" >
+  <ion-card *ngFor="let professor of dataResultados" >
     <ion-card-header>
         <ion-avatar>
           <img alt="Instrument" [src]="professor.imgprof" />
