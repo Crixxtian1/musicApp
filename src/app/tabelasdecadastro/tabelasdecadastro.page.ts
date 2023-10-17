@@ -8,8 +8,6 @@ import { MusicaapiService } from '../services/musicaapi.service';
 })
 export class TabelasdecadastroPage implements OnInit {
 
-
-
   professores = [];
   cidades = [];
 
@@ -19,7 +17,8 @@ export class TabelasdecadastroPage implements OnInit {
 
     this.musicaapiService.getProfessorPorInstrumento('canto').subscribe((res: any) => {this.professores = (res.content); console.log(this.professores)}),
 
-    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.cidades = (res.content); console.log(this.cidades)})
+    this.musicaapiService.getCidadesProfessor('lençóis').subscribe((res: any) => {this.cidades = (res.content); console.log(this.cidades)})
+
   }
 
 

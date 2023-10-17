@@ -40,6 +40,19 @@
 
   </ion-card-header>
 
+  <ion-list>
+    <ion-item>
+      <ion-select
+      aria-label="Cidade"
+      placeholder="Selecione a Cidade"
+      [multiple]="true"
+      label="">
+
+        <ion-select-option *ngFor="let cidade of cidades" [value]="cidade">{{ cidade.cidade }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
 
   <ion-card *ngFor="let professor of professores">
     <ion-card-header>

@@ -33,6 +33,21 @@ export class MusicaapiService {
     ) { }
 
 
+   // pesquisar(filtro: InstrumentoFiltro): Promise<any> {
+
+     // let params = newHttpParams ({
+     //   fromObject : {
+     //     page: filtro.pagina.toString(),
+     //     size: filtro.itensPorPagina.toString()
+      //  }
+
+     // });
+
+    //  if (filtro.nomeinstrumento) {
+     //   params = params.apeend('nomeinstrumento',)
+     // }
+
+   // }
 
 
   getTodosProfessor() {
@@ -66,10 +81,13 @@ export class MusicaapiService {
     );
   }
 
-
+  getCidadesProfessor(cidade: string) {
+    const res = this.http.get(`${this.url}/professores?cidades=${cidade}`, this.httpHeader)
+    return res
+  }
 
   getTodasCidades() {
-    const res = this.http.get(`${this.url}/cidades/todos`, this.httpHeader)
+    const res = this.http.get(`${this.url}/cidades`, this.httpHeader)
     return res.subscribe(
       res => res,
     );

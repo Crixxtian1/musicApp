@@ -37,4 +37,5 @@ export class EditarperfilprofessorPage  {
     // Lógica para alterar a foto de perfil
   }
 
+
 }

@@ -1,5 +1,6 @@
+import { InstrumentoFiltro } from './../services/musicaapi.service';
 import { Component, ViewChild } from '@angular/core';
-import { MusicaapiService, InstrumentoFiltro } from '../services/musicaapi.service';
+import { MusicaapiService } from '../services/musicaapi.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,25 +8,25 @@ import { MusicaapiService, InstrumentoFiltro } from '../services/musicaapi.servi
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  totalInstrumentos = 0;
-  filtro = new InstrumentoFiltro();
+ // totalInstrumentos = 0;
+ //filtro = new InstrumentoFiltro();
   instrumentos = [];
 
 
   constructor(private musicaapiService: MusicaapiService) { }
 
   async ngOnInit() {
-   // this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
+    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
 
-    this.pesquisar();
+   // this.pesquisar();
   }
 
-  pesquisar() {
+//  pesquisar() {
 
     //this.filtro.pagina = pagina;
 
-    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
+   //this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
 
-  }
+//  }
 
 }
