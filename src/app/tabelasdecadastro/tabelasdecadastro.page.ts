@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicaapiService } from '../services/musicaapi.service';
+import { ProfessorService } from '../services/professor.service';
 
 @Component({
   selector: 'app-tabelasdecadastro',
@@ -8,17 +9,14 @@ import { MusicaapiService } from '../services/musicaapi.service';
 })
 export class TabelasdecadastroPage implements OnInit {
 
-  professores = [];
-  cidades = [];
+  instrumento = ''
+  data: any = {}
 
-  constructor(private musicaapiService: MusicaapiService) { }
+  constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService) { }
 
   async ngOnInit() {
-
-    this.musicaapiService.getProfessorPorInstrumento('canto').subscribe((res: any) => {this.professores = (res.content); console.log(this.professores)}),
-
-    this.musicaapiService.getCidadesProfessor('lençóis').subscribe((res: any) => {this.cidades = (res.content); console.log(this.cidades)})
-
+    this.instrumento = this.professorService.getInstrumento()
+    this.professorService.getData().subscribe(e => this.data = e);
   }
 
 

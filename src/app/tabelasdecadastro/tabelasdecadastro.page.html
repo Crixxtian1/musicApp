@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Baixo</ion-title>
+    <ion-title>{{ instrumento }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,46 +18,33 @@
     <br />
 
     <ion-card-title>Professores</ion-card-title>
-    <ion-card-subtitle>Baixo</ion-card-subtitle>
-
-  <!--
-
-    <ion-list>
-      <ion-item>
-        <ion-select
-
-          justify="end" label="End"
-          aria-label="Food"
-          [compareWith]="compareWith"
-          placeholder="Filtrar Cidade"
-          (ionChange)="handleChange($event)">
-
-          <ion-select-option *ngFor="let cidade of cidades" [value]="cidade">{{ cidade.uf }}</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    -->
+    <ion-card-subtitle>{{ instrumento }}</ion-card-subtitle>
 
   </ion-card-header>
 
 
-  <ion-card *ngFor="let professor of professores">
+  <ion-card *ngFor="let professor of data.content" >
     <ion-card-header>
         <ion-avatar>
-          <img alt="Instrument" [src]="professor.imgprof"/>
+          <img alt="Instrument" [src]="professor.imgprof" />
         </ion-avatar>
-      <ion-card-title>{{ professor.nome}} {{professor.sobrenome}}</ion-card-title>
-      <ion-card-subtitle>{{ professor.cidade}} - {{professor.uf}}</ion-card-subtitle>
+      <ion-card-title>{{professor.nome}} {{professor.sobrenome}}</ion-card-title>
+      <ion-card-subtitle>{{professor.cidade}}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      <p><strong>Bio:</strong>{{ professor.bio }}</p>
-      <p><strong>Telefone:</strong> {{ professor.tell }}</p>
-      <p><strong>Email:</strong> {{ professor.email }}</p>
+      <p><strong>Bio: {{professor.bio}}</strong></p>
+      <p><strong>Telefone: {{professor.tell}}</strong></p>
+      <p><strong>Email: {{professor.email}}</strong></p>
     </ion-card-content>
   </ion-card>
 
   <br>
 
+  <div *ngIf="data.content === undefined || data.content.length < 1">
+    <img class="triste" src="../../assets/carinhatriste.png" alt="">
+    <br>
+    <h1 class="tristetexto">Aqui ainda não há professores!</h1>
+  </div>
 
 </ion-content>

@@ -52,7 +52,6 @@
       animated="true"
       mode="ios"
       placeholder="Digite o nome do instrumento"
-
     ></ion-searchbar>
 
 
@@ -68,6 +67,7 @@
             routerLinkActive="router-link-active"
             class="cardvio"
             color="light"
+            (click)="trocarParaTabelaCadastro(instrumento.nomeinstrumento)"
           >
             <ion-card-header>
               <ion-card-title>{{instrumento.nomeinstrumento}}</ion-card-title>

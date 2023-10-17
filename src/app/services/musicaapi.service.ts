@@ -49,6 +49,9 @@ export class MusicaapiService {
 
    // }
 
+   getProfessor() {
+     return this.http.get(`${this.url }/professores/todos`, this.httpHeader)
+   }
 
   getTodosProfessor() {
     const res = this.http.get(`${this.url}/professores/todos`, this.httpHeader)
