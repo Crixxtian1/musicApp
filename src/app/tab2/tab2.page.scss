@@ -32,7 +32,6 @@
   }
 
   ion-card {
-
     * {
       text-align: center;
     }
@@ -44,7 +43,6 @@
  }
 
  ion-col {
-    width: 50%;
     grid-template-columns: auto auto;
     display: grid;
 
@@ -52,7 +50,7 @@
   }
 
   ion-card-header {
-    height: 30%;
+
    display: flex;
     align-items: center;
     justify-content: center;
