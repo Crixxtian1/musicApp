@@ -8,7 +8,8 @@ import { MusicaapiService } from '../services/musicaapi.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
- // totalInstrumentos = 0;
+
+  // totalInstrumentos = 0;
  //filtro = new InstrumentoFiltro();
   instrumentos = [];
 
@@ -16,7 +17,10 @@ export class Tab2Page {
   constructor(private musicaapiService: MusicaapiService) { }
 
   async ngOnInit() {
-    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {this.instrumentos = (res.content); console.log(this.instrumentos)})
+    this.musicaapiService.getTodosInstrumentos().subscribe((res: any) => {
+      this.instrumentos = (res.content);
+      console.log(this.instrumentos)
+    })
 
    // this.pesquisar();
   }
