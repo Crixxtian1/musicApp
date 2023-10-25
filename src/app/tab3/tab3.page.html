@@ -8,48 +8,31 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-button (click)="toggleComentarios()">Comentários</ion-button>
 
-<ion-list>
+  <ion-card *ngIf="mostrarComentarios">
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar>
+          <ion-img [src]="fotoUsuario"></ion-img>
+        </ion-avatar>
+        <ion-label>{{nomeUsuario}}</ion-label>
+      </ion-item>
+      <ion-textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></ion-textarea>
+      <ion-button (click)="adicionarComentario()">Enviar</ion-button>
+    </ion-card-content>
+  </ion-card>
 
-  <ion-list-header class="ion-padding-bottom" color ="light">
-    CONVERSAS
-  </ion-list-header>
-
-  <ion-item detail [routerLink]="['/chat']" routerLinkActive="router-link-active" >
-    <ion-avatar slot="start">
-
-      <img src="../../assets/usuario.png">
-
-    </ion-avatar>
-    <ion-label>
-      Jose
-      <p>
-        <ion-text>
-          Vamos jogar?
-        </ion-text>
-      </p>
-    </ion-label>
-    <ion-text slot="end" color="medium">19:00</ion-text>
-  </ion-item>
-
-  <ion-item detail>
-    <ion-avatar slot="start">
-
-      <img src="../../assets/usuario.png">
-
-    </ion-avatar>
-    <ion-label>
-      Isabelao
-      <p>
-        <ion-text>
-          Vamos sair?
-        </ion-text>
-      </p>
-    </ion-label>
-    <ion-text slot="end" color="medium">19:00</ion-text>
-  </ion-item>
-
-
-</ion-list>
-
+  <ion-card *ngFor="let comentario of comentarios">
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar>
+          <ion-img [src]="comentario.foto"></ion-img>
+        </ion-avatar>
+        <ion-label>{{comentario.nome}}</ion-label>
+      </ion-item>
+      <ion-textarea readonly>{{comentario.texto}}</ion-textarea>
+      <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

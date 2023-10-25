@@ -13,6 +13,9 @@ export class Tab2Page {
   instrumentos = [];
   instrumentosResult = [...this.instrumentos]
 
+
+
+
   constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService) { }
 
   async ngOnInit() {
@@ -31,5 +34,7 @@ export class Tab2Page {
     const query = event.target.value.toLowerCase();
     this.instrumentosResult = this.instrumentos.filter((d: any) => d.nomeinstrumento.toLowerCase().indexOf(query) > -1);
   }
+
+
 
 }
