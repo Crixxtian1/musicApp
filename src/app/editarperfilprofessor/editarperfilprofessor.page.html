@@ -12,14 +12,17 @@
 <ion-content class="ion-padding">
   <div class="profile-wrapper">
     <div class="profile-picture" >
-      <img src="../../assets/usuario.png" alt="">
-    </div>
-
+      <div class="profile-picture" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
     <br>
+    </div>
 
     <div class="nome" >
-      <h1>Usuário</h1>
+      <h1>{{profile.name}} {{profile.sobrenome}}</h1>
     </div>
+
+    <ion-icon name="camera" size="large" (click)="mudarFotoPerfil()"></ion-icon>
+    <button (click)="mudarFotoPerfil()" class="change-photo-button">Mudar foto de perfil</button>
+
   </div>
 
 
@@ -44,12 +47,12 @@
 
   <ion-item>
     <ion-label position="stacked">Senha</ion-label>
-    <ion-input [(ngModel)]="profile.senha" [disabled]="!editingEnabled" type="password"></ion-input>
+    <ion-input type = "password" [(ngModel)]="profile.senha" [disabled]="!editingEnabled" type="password"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Descrição</ion-label>
-    <ion-input [(ngModel)]="profile.descricao" [disabled]="!editingEnabled"></ion-input>
+    <ion-input [(ngModel)]="profile.descricao" style="white-space: pre-wrap;"[disabled]="!editingEnabled"></ion-input>
   </ion-item>
 
 <br>
@@ -61,9 +64,9 @@
 
   <p>Cordas</p>
 
-            <ion-item>
+            <ion-item >
 
-              <ion-select [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
+              <ion-select  [(ngModel)]="profile.instrumentos" [disabled]="!editingEnabled" placeholder="Selecione" cancelText="Cancelar" [multiple]="true" okText="Ok">
                 <ion-select-option value="violao">Violão</ion-select-option>
                 <ion-select-option value="guitarra">Guitarra</ion-select-option>
                 <ion-select-option value="piano">Piano</ion-select-option>

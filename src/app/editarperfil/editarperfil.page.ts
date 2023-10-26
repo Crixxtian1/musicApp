@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editarperfil',
@@ -7,16 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarperfilPage  {
 
-  photoUrl: string = 'assets/usuario.png'; // Coloque o caminho da imagem padrão
+
+
+  photoUrl: string = '../../assets/isa.png'; // Coloque o caminho da imagem padrão
 
   profile = {
-    name: '',
-    sobrenome: '',
-    email: '',
-    senha: ''
+    name: 'Isabelli',
+    sobrenome: 'Kevia',
+    email: 'isa@email.com',
+    senha: '12345'
   };
 
   editingEnabled = false;
+
 
 
   enableEditing() {
@@ -34,5 +38,20 @@ export class EditarperfilPage  {
   editarPerfil() {
     // Lógica para alterar a foto de perfil
   }
+  constructor(public alertController: AlertController) {}
 
+  mudarFotoPerfil() {
+    this.presentAlert();
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Mudar foto de perfil',
+      subHeader: 'Escolha uma opção',
+      message: 'Você deseja tirar uma nova foto ou selecionar uma da galeria?',
+      buttons: ['Cancelar', 'Tirar Foto', 'Selecionar da Galeria'],
+    });
+
+    await alert.present();
+  }
 }

@@ -13,7 +13,16 @@ export class Tab2Page {
   instrumentos = [];
   instrumentosResult = [...this.instrumentos]
 
+  photoUrl: string = '../../assets/isa.png'; // Coloque o caminho da imagem padrão
 
+  profile = {
+    name: 'Isabelli',
+    sobrenome: 'Kevia',
+    email: 'isa@email.com',
+    senha: '12345',
+    instrumentos:'Violão',
+    descricao:'Sou professora de Violão'
+  };
 
 
   constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService) { }

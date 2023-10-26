@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Editar Perfil
+      Editar Perfil Aluno
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,11 +12,16 @@
 <ion-content class="ion-padding">
   <div class="profile-wrapper">
     <div class="profile-picture" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
+    <br>
     <div class="nome" >
-      <h1>Arianny</h1>
+      <h1>{{profile.name}} {{profile.sobrenome}}</h1>
     </div>
+    <ion-icon color= "tema" name="camera" size="large" (click)="mudarFotoPerfil()"></ion-icon>
+  <button (click)="mudarFotoPerfil()" color="tema" class="change-photo-button">Mudar foto de perfil</button>
   </div>
 
+  <br>
+  <ion-chip class="chip1" color ="tema">Dados</ion-chip>
 
 <ion-list>
   <ion-item>
@@ -36,7 +41,7 @@
 
   <ion-item>
     <ion-label position="stacked">Senha</ion-label>
-    <ion-input [(ngModel)]="profile.senha" [disabled]="!editingEnabled"></ion-input>
+    <ion-input   type="password" [(ngModel)]="profile.senha" [disabled]="!editingEnabled"></ion-input>
   </ion-item>
 </ion-list>
 

@@ -54,3 +54,19 @@
   .nome{
     margin-top: 30px;
   }
+
+  .change-photo-button {
+    background-color: #531fb4; /* Cor do botão de mudança de foto */
+    color: white; /* Cor do texto do botão */
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  ion-icon {
+    margin-top: 20px;
+    color: #531fb4; /* Cor do ícone da câmera */
+  }
+

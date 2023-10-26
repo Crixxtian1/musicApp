@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicaapiService } from '../services/musicaapi.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editarperfilprofessor',
@@ -10,15 +11,15 @@ export class EditarperfilprofessorPage  {
 
   professores = []
 
-  photoUrl: string = '../../assets/usuario.png'; // Coloque o caminho da imagem padrão
+  photoUrl: string = '../../assets/isa.png'; // Coloque o caminho da imagem padrão
 
   profile = {
-    name: '',
-    sobrenome: '',
-    email: '',
-    senha: '',
-    instrumentos:'',
-    descricao:''
+    name: 'Isabelli',
+    sobrenome: 'Kevia',
+    email: 'isa@email.com',
+    senha: '12345',
+    instrumentos:'Violão',
+    descricao:'Sou professora de Violãoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
   };
 
   editingEnabled = false;
@@ -40,7 +41,7 @@ export class EditarperfilprofessorPage  {
     // Lógica para alterar a foto de perfil
   }
 
-  constructor(private musicaapiService: MusicaapiService) { }
+  constructor(public alertController: AlertController, private musicaapiService: MusicaapiService ) { }
 
   async ngOnInit() {
     this.musicaapiService.getProfessor().subscribe((res: any) =>
@@ -50,6 +51,20 @@ export class EditarperfilprofessorPage  {
 
 
 
+  mudarFotoPerfil() {
+    this.presentAlert();
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Mudar foto de perfil',
+      subHeader: 'Escolha uma opção',
+      message: 'Você deseja tirar uma nova foto ou selecionar uma da galeria?',
+      buttons: ['Cancelar', 'Tirar Foto', 'Selecionar da Galeria'],
+    });
+
+    await alert.present();
+  }
 
 
 

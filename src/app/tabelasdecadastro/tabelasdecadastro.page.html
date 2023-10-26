@@ -40,43 +40,13 @@
       <br>
       <p><strong>Email: </strong>{{professor.email}}</p>
     </ion-card-content>
-
     <br>
 
     <ion-list>
-
       <ion-item>
-
-        <ion-chip color="tema" class="coments" (click)="toggleComentarios()">Comentários</ion-chip>
+        <ion-chip color="tema" class="coments"  >Dar feedback</ion-chip>
       </ion-item>
     </ion-list>
-
-
-  <ion-card *ngIf="mostrarComentarios">
-    <ion-card-content>
-      <ion-item>
-        <ion-avatar>
-          <ion-img [src]="fotoUsuario"></ion-img>
-        </ion-avatar>
-        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;">{{nomeUsuario}}</ion-label>
-      </ion-item>
-      <ion-textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></ion-textarea>
-      <ion-icon name="send-outline" color="tema" class="enviar" (click)="adicionarComentario()"></ion-icon>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngFor="let comentario of comentarios">
-    <ion-card-content>
-      <ion-item>
-        <ion-avatar>
-          <ion-img  [src]="comentario.foto"></ion-img>
-        </ion-avatar>
-        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;">{{comentario.nome}}</ion-label>
-      </ion-item>
-      <ion-textarea readonly>{{comentario.texto}}</ion-textarea>
-      <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
-    </ion-card-content>
-  </ion-card>
   </ion-card>
 
   <br>
