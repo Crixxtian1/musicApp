@@ -24,7 +24,7 @@
   </ion-card-header>
 
 
-  <ion-card *ngFor="let professor of dataResultados" >
+  <ion-card [routerLink]="['/tabalasdecadastro2']" routerLinkActive="router-link-active" *ngFor="let professor of dataResultados" >
     <ion-card-header>
         <ion-avatar>
           <img alt="Instrument" [src]="professor.imgprof" />
@@ -46,7 +46,7 @@
     <ion-list>
 
       <ion-item>
-        <ion-badge color = "tema" slot="end">1</ion-badge>
+
         <ion-chip color="tema" class="coments" (click)="toggleComentarios()">Comentários</ion-chip>
       </ion-item>
     </ion-list>
@@ -69,9 +69,9 @@
     <ion-card-content>
       <ion-item>
         <ion-avatar>
-          <ion-img [src]="comentario.foto"></ion-img>
+          <ion-img  [src]="comentario.foto"></ion-img>
         </ion-avatar>
-        <ion-label style="white-space: pre-wrap;">{{comentario.nome}}</ion-label>
+        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;">{{comentario.nome}}</ion-label>
       </ion-item>
       <ion-textarea readonly>{{comentario.texto}}</ion-textarea>
       <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
