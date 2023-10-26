@@ -3,69 +3,41 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{instrumento}}</ion-title>
+    <ion-title mode="ios">Comentários</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-<ion-card-header>
-    <ion-card-title>Professores</ion-card-title>
-    <ion-card-subtitle>{{instrumento}}</ion-card-subtitle>
-  </ion-card-header>
 
-  <ion-card [routerLink]="['/tabalasdecadastro2']" routerLinkActive="router-link-active" *ngFor="let professor of dataResultados" >
+  <ion-card *ngFor="let comentario of comentarios">
     <ion-card-header>
-        <ion-avatar>
-          <img alt="Instrument" [src]="professor.imgprof" />
-        </ion-avatar>
-      <ion-card-title>{{professor.nome}} {{professor.sobrenome}}</ion-card-title>
-      <ion-card-subtitle>{{professor.cidade}} - {{professor.uf}}</ion-card-subtitle>
+      <ion-avatar>
+        <ion-img [src]="comentario.foto"></ion-img>
+      </ion-avatar>
+      <ion-card-title class = "nomeUsuario" style="white-space: pre-wrap;">{{comentario.nome}}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
-      <p><strong>Bio:</strong> {{professor.bio}}</p>
-      <br>
-      <p><strong>Telefone: </strong>{{professor.tell}}</p>
-      <br>
-      <p><strong>Email: </strong>{{professor.email}}</p>
+      <ion-textarea [(ngModel)]="comentario.texto" readonly="{{!comentario.editando}}"></ion-textarea>
+      <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
+      <ion-button (click)="editarComentario(comentario)" *ngIf="!comentario.editando">Editar</ion-button>
+      <ion-button (click)="salvarComentario(comentario)" *ngIf="comentario.editando">Salvar</ion-button>
+      <ion-button (click)="excluirComentario(comentario)">Excluir</ion-button>
     </ion-card-content>
+  </ion-card>
 
-    <br>
-
-    <ion-list>
-
-      <ion-item>
-
-        <ion-chip color="tema" class="coments" (click)="toggleComentarios()">Comentários</ion-chip>
-      </ion-item>
-    </ion-list>
-
-
-  <ion-card *ngIf="mostrarComentarios">
+  <ion-card>
     <ion-card-content>
       <ion-item>
         <ion-avatar>
           <ion-img [src]="fotoUsuario"></ion-img>
         </ion-avatar>
-        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;">{{nomeUsuario}}</ion-label>
+        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;" >{{nomeUsuario}}</ion-label>
       </ion-item>
       <ion-textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></ion-textarea>
-      <ion-icon name="send-outline" color="tema" class="enviar" (click)="adicionarComentario()"></ion-icon>
+      <ion-button (click)="adicionarComentario()">Enviar</ion-button>
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngFor="let comentario of comentarios">
-    <ion-card-content>
-      <ion-item>
-        <ion-avatar>
-          <ion-img  [src]="comentario.foto"></ion-img>
-        </ion-avatar>
-        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;">{{comentario.nome}}</ion-label>
-      </ion-item>
-      <ion-textarea readonly>{{comentario.texto}}</ion-textarea>
-      <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
-    </ion-card-content>
-  </ion-card>
-  </ion-card>
+
 </ion-content>

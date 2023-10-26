@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title >{{ instrumento }}</ion-title>
+    <ion-title mode="ios">{{ instrumento }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -40,13 +40,11 @@
       <br>
       <p><strong>Email: </strong>{{professor.email}}</p>
     </ion-card-content>
-    <br>
 
-    <ion-list>
-      <ion-item>
-        <ion-chip color="tema" class="coments"  >Dar feedback</ion-chip>
-      </ion-item>
-    </ion-list>
+
+        <ion-chip class="chip1" color ="tema">Ver comentários</ion-chip>
+
+
   </ion-card>
 
   <br>
