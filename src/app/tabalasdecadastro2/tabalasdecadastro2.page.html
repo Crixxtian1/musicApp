@@ -9,35 +9,39 @@
 
 <ion-content>
 
-
-  <ion-card *ngFor="let comentario of comentarios">
-    <ion-card-header>
-      <ion-avatar>
+  <ion-list>
+    <ion-item *ngFor="let comentario of comentarios">
+      <ion-avatar slot="start">
         <ion-img [src]="comentario.foto"></ion-img>
       </ion-avatar>
-      <ion-card-title class = "nomeUsuario" style="white-space: pre-wrap;">{{comentario.nome}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-textarea [(ngModel)]="comentario.texto" readonly="{{!comentario.editando}}"></ion-textarea>
-      <p>{{comentario.horario | date:'dd/MM/yyyy HH:mm'}}</p>
-      <ion-button (click)="editarComentario(comentario)" *ngIf="!comentario.editando">Editar</ion-button>
-      <ion-button (click)="salvarComentario(comentario)" *ngIf="comentario.editando">Salvar</ion-button>
-      <ion-button (click)="excluirComentario(comentario)">Excluir</ion-button>
-    </ion-card-content>
-  </ion-card>
+      <ion-label>
+        <p>{{ comentario.nome }}</p>
+        <h2>{{ comentario.texto }}</h2>
+        <p>{{ comentario.horario | date: 'dd/MM/yyyy HH:mm' }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="confirmarExcluir(comentario)">Excluir</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
 
   <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-avatar>
+        <ion-avatar slot="start">
           <ion-img [src]="fotoUsuario"></ion-img>
         </ion-avatar>
-        <ion-label class = "nomeUsuario" style="white-space: pre-wrap;" >{{nomeUsuario}}</ion-label>
+        <ion-label>
+          <h2>{{ nomeUsuario }}</h2>
+        </ion-label>
       </ion-item>
-      <ion-textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></ion-textarea>
-      <ion-button (click)="adicionarComentario()">Enviar</ion-button>
+      <ion-item>
+        <ion-textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></ion-textarea>
+      </ion-item>
+      <ion-button expand="full" color = "tema" (click)="adicionarComentario()">Enviar</ion-button>
     </ion-card-content>
   </ion-card>
+
 
 
 </ion-content>

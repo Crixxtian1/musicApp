@@ -20,39 +20,41 @@
 
     <ion-card-title>Professores</ion-card-title>
     <ion-card-subtitle>{{ instrumento }}</ion-card-subtitle>
-
   </ion-card-header>
 
-
-  <ion-card [routerLink]="['/tabalasdecadastro2']" routerLinkActive="router-link-active" *ngFor="let professor of dataResultados" >
+  <ion-card
+    [routerLink]="['/tabalasdecadastro2']"
+    routerLinkActive="router-link-active"
+    *ngFor="let professor of dataResultados"
+  >
     <ion-card-header>
-        <ion-avatar>
-          <img alt="Instrument" [src]="professor.imgprof" />
-        </ion-avatar>
-      <ion-card-title>{{professor.nome}} {{professor.sobrenome}}</ion-card-title>
-      <ion-card-subtitle>{{professor.cidade}} - {{professor.uf}}</ion-card-subtitle>
+      <ion-avatar>
+        <img alt="Instrument" [src]="professor.imgprof" />
+      </ion-avatar>
+      <ion-card-title
+        >{{professor.nome}} {{professor.sobrenome}}</ion-card-title
+      >
+      <ion-card-subtitle
+        >{{professor.cidade}} - {{professor.uf}}</ion-card-subtitle
+      >
     </ion-card-header>
 
     <ion-card-content>
       <p><strong>Bio:</strong> {{professor.bio}}</p>
-      <br>
+      <br />
       <p><strong>Telefone: </strong>{{professor.tell}}</p>
-      <br>
+      <br />
       <p><strong>Email: </strong>{{professor.email}}</p>
     </ion-card-content>
 
-
-        <ion-chip class="chip1" color ="tema">Ver comentários</ion-chip>
-
-
+    <ion-chip class="chip1" color="tema">Ver comentários</ion-chip>
   </ion-card>
 
-  <br>
+  <br />
 
   <div *ngIf="data.content === undefined || data.content.length < 1">
-    <img class="triste" src="../../assets/carinhatriste.png" alt="">
-    <br>
+    <img class="triste" src="../../assets/carinhatriste.png" alt="" />
+    <br />
     <h1 class="tristetexto">Aqui ainda não há professores!</h1>
   </div>
-
 </ion-content>

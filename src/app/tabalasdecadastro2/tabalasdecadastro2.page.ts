@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MusicaapiService } from '../services/musicaapi.service';
 import { ProfessorService } from '../services/professor.service';
 import { Storage } from '@ionic/storage-angular';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -11,17 +12,17 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class Tabalasdecadastro2Page implements OnInit {
 
-  comentarios: { nome: string, foto: string, texto: string, horario: Date, editando: boolean }[] = [];
-  novoComentario: string = '';
   nomeUsuario = 'Isabelli Kevia';
-  fotoUsuario = '../../assets/isa.png';
+  fotoUsuario = '../../assets/isa.png'; // Substitua pela URL da foto do usuário
+  comentarios: any[] = [];
+  novoComentario: string = '';
 
   instrumento = ''
   data: any = {}
   dataResultados: any = []
 
-  constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService, private storage: Storage) {
-    this.carregarComentarios();
+  constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService, private storage: Storage, private alertController: AlertController) {
+
  // Carregue os comentários anteriores do armazenamento ou de um serviço
   }
 
@@ -36,45 +37,45 @@ export class Tabalasdecadastro2Page implements OnInit {
     this.dataResultados = this.data.content.filter((d: any) => d.cidade.toLowerCase().indexOf(query) > -1);
   }
 
-  editarComentario(comentario: any) {
-    comentario.editando = true;
-  }
-
-  salvarComentario(comentario: any) {
-    comentario.editando = false;
-    this.salvarComentarios();
-  }
-
   adicionarComentario() {
     if (this.novoComentario.trim() !== '') {
-      this.comentarios.unshift({
+      const comentario = {
         nome: this.nomeUsuario,
         foto: this.fotoUsuario,
         texto: this.novoComentario,
-        horario: new Date(),
-        editando: false
-      });
+        horario: new Date()
+      };
+
+      this.comentarios.unshift(comentario);
       this.novoComentario = '';
-      this.salvarComentarios();
     }
+  }
+
+  async confirmarExcluir(comentario: any) {
+    const alert = await this.alertController.create({
+      header: 'Excluir Comentário',
+      message: 'Deseja realmente excluir este comentário?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel'
+        },
+        {
+          text: 'Excluir',
+          handler: () => {
+            this.excluirComentario(comentario);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   excluirComentario(comentario: any) {
     const index = this.comentarios.indexOf(comentario);
-    if (index > -1) {
+    if (index !== -1) {
       this.comentarios.splice(index, 1);
-      this.salvarComentarios();
     }
-  }
-
-  async carregarComentarios() {
-    const comentarios = await this.storage.get('comentarios');
-    if (comentarios) {
-      this.comentarios = comentarios;
-    }
-  }
-
-  salvarComentarios() {
-    this.storage.set('comentarios', this.comentarios);
   }
 }
