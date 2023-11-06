@@ -47,12 +47,11 @@
 
   <ion-item>
     <ion-label position="stacked">Senha</ion-label>
-    <ion-input type = "password" [(ngModel)]="profile.senha" [disabled]="!editingEnabled" type="password"></ion-input>
+    <ion-input class="bio" type = "password" [(ngModel)]="profile.senha" [disabled]="!editingEnabled" type="password"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="stacked">Descrição</ion-label>
-    <ion-input [(ngModel)]="profile.descricao" style="white-space: pre-wrap;"[disabled]="!editingEnabled"></ion-input>
+    <ion-textarea label="Bio" [(ngModel)]="profile.descricao" style="white-space: pre-wrap;"[disabled]="!editingEnabled"></ion-textarea>
   </ion-item>
 
 <br>

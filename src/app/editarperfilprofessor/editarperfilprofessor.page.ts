@@ -11,15 +11,15 @@ export class EditarperfilprofessorPage  {
 
   professores = []
 
-  photoUrl: string = '../../assets/isa.png'; // Coloque o caminho da imagem padrão
+  photoUrl: string = '../../assets/cris.png'; // Coloque o caminho da imagem padrão
 
   profile = {
-    name: 'Isabelli',
-    sobrenome: 'Kevia',
-    email: 'isa@email.com',
+    name: 'Cristian',
+    sobrenome: 'Machado',
+    email: 'cris@email.com',
     senha: '12345',
-    instrumentos:'Violão',
-    descricao:'Sou professora de Violãoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    instrumentos:'Piano',
+    descricao:'Sou um pianista talentoso e versátil, particularmente muito bonito e inteligente. Compartilho meu conhecimento com entusiasmo.'
   };
 
   editingEnabled = false;
