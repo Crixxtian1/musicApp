@@ -103,6 +103,13 @@ export class MusicaapiService {
     );
   }
 
+  getComentarioPorId(id: number) {
+    const res = this.http.get(`${this.url}/comentarios/${id}`, this.httpHeader)
+    return res.subscribe(
+      res => res,
+    );
+  }
+
 
 
 
