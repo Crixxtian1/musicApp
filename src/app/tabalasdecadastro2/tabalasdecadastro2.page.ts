@@ -16,6 +16,7 @@ export class Tabalasdecadastro2Page implements OnInit {
   nomeUsuario = 'Isabelli Kevia';
   fotoUsuario = '../../assets/isa.png'; // Substitua pela URL da foto do usuário
   comentarios: any = [];
+  comentarioscriado: any = [];
   novoComentario: string = '';
 
   instrumento = ''
@@ -49,7 +50,7 @@ export class Tabalasdecadastro2Page implements OnInit {
         horario: new Date()
       };
 
-      this.comentarios.unshift(comentario);
+      this.comentarioscriado.push(comentario);
       this.novoComentario = '';
     }
   }
@@ -76,9 +77,9 @@ export class Tabalasdecadastro2Page implements OnInit {
   }
 
   excluirComentario(comentario: any) {
-    const index = this.comentarios.indexOf(comentario);
+    const index = this.comentarioscriado.indexOf(comentario);
     if (index !== -1) {
-      this.comentarios.splice(index, 1);
+      this.comentarioscriado.splice(index, 1);
     }
   }
 }
