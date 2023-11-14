@@ -33,22 +33,6 @@ export class MusicaapiService {
     ) { }
 
 
-   // pesquisar(filtro: InstrumentoFiltro): Promise<any> {
-
-     // let params = newHttpParams ({
-     //   fromObject : {
-     //     page: filtro.pagina.toString(),
-     //     size: filtro.itensPorPagina.toString()
-      //  }
-
-     // });
-
-    //  if (filtro.nomeinstrumento) {
-     //   params = params.apeend('nomeinstrumento',)
-     // }
-
-   // }
-
    getProfessor() {
      return this.http.get(`${this.url }/professores/todos`, this.httpHeader)
    }
@@ -104,10 +88,8 @@ export class MusicaapiService {
   }
 
   getComentarioPorId(id: number) {
-    const res = this.http.get(`${this.url}/comentarios/${id}`, this.httpHeader)
-    return res.subscribe(
-      res => res,
-    );
+    const res = this.http.get(`${this.url}/comentarios/professor/${id}`, this.httpHeader)
+    return res;
   }
 
 

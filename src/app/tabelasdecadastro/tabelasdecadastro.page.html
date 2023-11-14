@@ -23,8 +23,6 @@
   </ion-card-header>
 
   <ion-card
-    [routerLink]="['/tabalasdecadastro2']"
-    routerLinkActive="router-link-active"
     *ngFor="let professor of dataResultados"
   >
     <ion-card-header>
@@ -47,7 +45,7 @@
       <p><strong>Email: </strong>{{professor.email}}</p>
     </ion-card-content>
 
-    <ion-chip class="chip1" color="tema">Ver comentários</ion-chip>
+    <ion-chip class="chip1" color="tema" (click)="setIdProfessor(professor.id)">Ver comentários</ion-chip>
   </ion-card>
 
   <br />

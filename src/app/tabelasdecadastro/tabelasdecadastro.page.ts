@@ -1,7 +1,8 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MusicaapiService } from '../services/musicaapi.service';
 import { ProfessorService } from '../services/professor.service';
-import { Storage } from '@ionic/storage';
+import { ComentarioService } from '../services/comentario.service';
 
 @Component({
   selector: 'app-tabelasdecadastro',
@@ -16,7 +17,7 @@ export class TabelasdecadastroPage implements OnInit {
   data: any = {}
   dataResultados: any = []
 
-  constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService, private storage: Storage) {
+  constructor(private router: Router, private professorService: ProfessorService, private comentarioService: ComentarioService) {
   }
 
   async ngOnInit() {
@@ -28,6 +29,12 @@ export class TabelasdecadastroPage implements OnInit {
   public pesquisarCidade(event: any) {
     const query = event.target.value.toLowerCase();
     this.dataResultados = this.data.content.filter((d: any) => d.cidade.toLowerCase().indexOf(query) > -1);
+  }
+
+  public setIdProfessor(id: any) {
+    console.log('aaaa', id)
+    this.comentarioService.setIdProfessor(id)
+    this.router.navigateByUrl('/tabalasdecadastro2')
   }
 
 }

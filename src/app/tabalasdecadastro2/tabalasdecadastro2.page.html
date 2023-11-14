@@ -12,12 +12,12 @@
   <ion-list>
     <ion-item *ngFor="let comentario of comentarios">
       <ion-avatar slot="start">
-        <ion-img [src]="comentario.foto"></ion-img>
+        <ion-img [src]="comentario.aluno.imgaluno"></ion-img>
       </ion-avatar>
       <ion-label>
-        <p>{{ comentario.nome }}</p>
-        <h2>{{ comentario.texto }}</h2>
-        <p>{{ comentario.horario | date: 'dd/MM/yyyy HH:mm' }}</p>
+        <p>{{ comentario.aluno.nome }}</p>
+        <h2>{{ comentario.comentario }}</h2>
+        <p>{{ comentario.data | date: 'dd/MM/yyyy' }} {{ comentario.horario.substring(-1, 5) }}</p>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button (click)="confirmarExcluir(comentario)">Excluir</ion-button>

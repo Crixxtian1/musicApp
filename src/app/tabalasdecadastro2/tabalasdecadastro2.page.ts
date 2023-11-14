@@ -3,6 +3,7 @@ import { MusicaapiService } from '../services/musicaapi.service';
 import { ProfessorService } from '../services/professor.service';
 import { Storage } from '@ionic/storage-angular';
 import { AlertController } from '@ionic/angular';
+import { ComentarioService } from '../services/comentario.service';
 
 
 @Component({
@@ -14,14 +15,14 @@ export class Tabalasdecadastro2Page implements OnInit {
 
   nomeUsuario = 'Isabelli Kevia';
   fotoUsuario = '../../assets/isa.png'; // Substitua pela URL da foto do usuário
-  comentarios: any[] = [];
+  comentarios: any = [];
   novoComentario: string = '';
 
   instrumento = ''
   data: any = {}
   dataResultados: any = []
 
-  constructor(private musicaapiService: MusicaapiService, private professorService: ProfessorService, private storage: Storage, private alertController: AlertController) {
+  constructor(private comentarioService: ComentarioService, private professorService: ProfessorService, private storage: Storage, private alertController: AlertController) {
 
  // Carregue os comentários anteriores do armazenamento ou de um serviço
   }
@@ -29,6 +30,8 @@ export class Tabalasdecadastro2Page implements OnInit {
   async ngOnInit() {
     this.instrumento = this.professorService.getInstrumento()
     this.professorService.getData().subscribe((e: any) => {this.data = e; this.dataResultados = e.content});
+    this.comentarioService.getData().subscribe((e: any) => {this.comentarios = e; console.log(e)})
+
   }
 
 
