@@ -16,15 +16,14 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab2',
-        pathMatch: 'full'
+        path: 'tab1',
+        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab2',
+    redirectTo: '/inicio2',
     pathMatch: 'full'
   }
 ];

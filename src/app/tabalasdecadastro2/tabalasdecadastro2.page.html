@@ -14,9 +14,9 @@
       <ion-avatar slot="start">
         <ion-img [src]="comentario.foto"></ion-img>
       </ion-avatar>
-      <ion-label>
+      <ion-label  class="sla">
         <p>{{ comentario.nome }}</p>
-        <h2>{{ comentario.texto }}</h2>
+        <h2  class="sla">{{ comentario.texto }}</h2>
         <p>{{ comentario.horario | date: 'dd/MM/yyyy HH:mm' }}</p>
       </ion-label>
       <ion-buttons slot="end">
@@ -31,9 +31,9 @@
       <ion-avatar slot="start">
         <ion-img [src]="comentario.aluno.imgaluno"></ion-img>
       </ion-avatar>
-      <ion-label>
+      <ion-label  class="sla">
         <p>{{ comentario.aluno.nome }} {{ comentario.aluno.sobrenome }} </p>
-        <h2>{{ comentario.comentario }}</h2>
+        <h2  class="sla">{{ comentario.comentario }}</h2>
         <p>{{ comentario.data | date: 'dd/MM/yyyy' }} {{ comentario.horario.substring(-1, 5) }}</p>
       </ion-label>
     </ion-item>

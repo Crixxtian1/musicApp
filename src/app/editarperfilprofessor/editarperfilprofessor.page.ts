@@ -17,9 +17,12 @@ export class EditarperfilprofessorPage  {
     name: 'Cristian',
     sobrenome: 'Machado',
     email: 'cris@email.com',
+    emailcont: 'cristian.machado4@etec.sp.gov.br',
+    tell: '14 981147032',
     senha: '12345',
     instrumentos:'Piano',
-    descricao:'Sou um pianista talentoso e versátil, particularmente muito bonito e inteligente. Compartilho meu conhecimento com entusiasmo.'
+    descricao:'Sou um pianista talentoso e versátil, particularmente muito bonito e inteligente. Compartilho meu conhecimento com entusiasmo.',
+    cidade:'Lençóis Paulista'
   };
 
   editingEnabled = false;
